@@ -1,0 +1,155 @@
+body{
+    font-family: sans-serif;
+    background-image: url("../img/Desert.jpg");
+    background-repeat: no-repeat;
+    /* 背景图不重复 */
+    overflow: hidden;
+    /* 溢出内容隐藏 */
+    background-size: cover;
+    /* 背景图片按比例缩放以填充整个容器 */
+}
+
+.container{
+    width: 380px;
+    margin: 7% auto;
+    /* 居中对齐 */
+    border-radius: 25px;
+    /* 圆角边框 */
+    background-color: rgba(0,0,0,0.1);
+    /* 背景颜色透明度为0.1 */
+    box-shadow:0 0 17px #333;
+    /* 添加阴影效果 */
+}
+
+.header{
+    text-align: center;
+    /* 文字居中对齐 */
+    padding-top: 35px;
+    /* 顶部内边距 */
+}
+
+.header h1{
+    color: #333;
+    /* 文字颜色为#333（深灰色） */
+    font-size: 45px;
+    /* 字体大小 */
+    margin-bottom: 35px;
+    /* 底部外边距 */
+}
+
+.main{
+    text-align: center;
+    /* 文字居中对齐 */
+}
+
+.main input,button{
+    background-color: rgba(225,225,225,0.5);
+    /*透明度*/
+    border-radius: 15px;
+    /*圆角边框*/
+    width: 300px;
+    height: 40px;
+    /* 输入框和按钮的宽高 */
+    border: none;
+    /* 去除边框 */
+    outline: none;
+    /* 去除选中时的边框样式 */
+    padding-left: 40px;
+    /* 左内边距 */
+    box-sizing: border-box;
+    /* 盒模型为border-box */
+    font-size: 15px;
+    /* 字体大小 */
+    color: #333333;
+    /* 文字颜色为#333333（深灰色） */
+    margin-bottom: 40px;
+    /* 底部外边距 */
+}
+
+.main button{
+    padding-left: 0;
+    /* 去除按钮的左内边距 */
+    background-color: #83acf1;
+    /* 背景颜色为#83acf1（浅蓝色） */
+    letter-spacing: 1px;
+    /* 字母间距为1像素 */
+    font-weight: bold;
+    /* 字体加粗 */
+    margin-bottom: 70px;
+    /* 底部外边距 */
+}
+
+.main button:hover{
+    box-shadow:2px 2px 5px #555;
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: #7799d4;
+    /* 背景颜色变为#7799d4（浅蓝色） */
+}
+
+.main input:hover{
+    box-shadow:2px 2px 5px #555;
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: darkturquoise;
+    /* 背景颜色变为darkturquoise */
+}
+
+.main span{
+    position: relative;
+    /* 相对定位 */
+}
+
+.main i{
+    position: absolute;
+    left: 15px;
+    /* 左偏移量为15像素 */
+    color: #333333;
+    /* 字体颜色为#333333（深灰色） */
+    font-size: 18px;
+    /* 字体大小 */
+    top: 2px;
+    /* 顶部偏移量为2像素 */
+}
+
+#subDiv input{
+    padding: 7px 15px;
+    /* 上下内边距为7像素，左右内边距为15像素 */
+    background-color: #3c6db0;
+    /* 背景颜色为#3c6db0（深蓝色） */
+    text-align: center;
+    /* 文字居中对齐 */
+    border-radius: 5px;
+    /* 圆角边框 */
+    overflow: hidden;
+    /* 溢出内容隐藏 */
+    min-width: 80px;
+    /* 最小宽度为80像素 */
+    border: none;
+    /* 去除边框 */
+    color: #FFF;
+    /* 文字颜色为白色 */
+    box-shadow: 1px 1px 1px rgba(75, 75, 75, 0.3);
+    /* 添加阴影效果 */
+}
+
+#subDiv input:hover{
+    box-shadow:2px 2px 5px #555;
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: darkturquoise;
+    /* 背景颜色变为darkturquoise */
+}
+
+#subDiv input:active{
+    box-shadow:2px 2px 5px #555;
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: #3c6db0;
+    /* 背景颜色变为darkturquoise */
+}
+
+
+#subDiv a{
+    text-align: left;
+    font-size: 20px;
+    /* 字体大小 */
+    color: darkturquoise;
+    /* 文字颜色为红色 */
+}

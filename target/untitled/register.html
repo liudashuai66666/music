@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>登录页面</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="css/register.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="header">
+                <h1>注册</h1>
+            </div>
+
+            <div class="main">
+                <form>
+
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="昵称" required>
+                    </span><br>
+
+                    <span>
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" placeholder="邮箱" pattern="^[1-9][0-9]{4,}@qq.com$" required title="请输入正确的邮箱格式">
+                    </span><br>
+
+                    <span>
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="passwordInput" placeholder="密码" pattern="^(?!\d+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]{8,16}$" required title="请输入长度在8~12之间包含大小写字母和数字至少两种">
+                    </span><br>
+
+                    <span>
+                        <i class="fa fa-eye"></i>
+                        <input id="Captcha" type="text" placeholder="验证码" required>
+                        <input id="sendCaptcha" type="button" value="发送">
+                    </span><br>
+
+                    <div id="subDiv">
+                        <a href="login.html">已有账号？点击登录</a>
+                        <br>
+                        <input type="submit" class="button" value="注册">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
