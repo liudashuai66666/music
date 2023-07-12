@@ -11,7 +11,7 @@ body{
 
 .container{
     width: 380px;
-    margin: 7% auto;
+    margin: 4% auto;
     /* 居中对齐 */
     border-radius: 25px;
     /* 圆角边框 */
@@ -33,7 +33,7 @@ body{
     /* 文字颜色为#333（深灰色） */
     font-size: 45px;
     /* 字体大小 */
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     /* 底部外边距 */
 }
 
@@ -62,8 +62,18 @@ body{
     /* 字体大小 */
     color: #333333;
     /* 文字颜色为#333333（深灰色） */
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     /* 底部外边距 */
+}
+
+.err_msg{
+    margin-left: -105px;
+    color: red;
+}
+
+#uname_err{
+    margin-left: -108px;
+    margin-top: 50px;
 }
 
 #Captcha{
@@ -74,6 +84,19 @@ body{
     width: 50px;
     height: 40px;
     padding-left: 5px;
+    background-color: #7799d4;
+}
+#sendCaptcha:hover{
+    box-shadow:2px 2px 5px #555;
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: darkturquoise;
+    /* 背景颜色变为#7799d4（浅蓝色） */
+}
+#sendCaptcha:active{
+    box-shadow:2px 2px 5px #555;
+    /* 鼠标按下时添加阴影效果 */
+    background-color: #3c6db0;
+    /* 背景颜色变为darkturquoise */
 }
 
 .main button{
@@ -150,7 +173,7 @@ body{
 
 #subDiv input:active{
     box-shadow:2px 2px 5px #555;
-    /* 鼠标悬停时添加阴影效果 */
+    /* 鼠标按下时添加阴影效果 */
     background-color: #3c6db0;
     /* 背景颜色变为darkturquoise */
 }

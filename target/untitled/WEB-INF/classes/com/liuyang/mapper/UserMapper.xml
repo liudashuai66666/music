@@ -16,12 +16,16 @@
         select * from user;
     </select>
 
-    <select id="findById" resultType="com.liuyang.pojo.User">
-        select * from user where username=#{username};
+    <select id="findByMailbox" resultType="com.liuyang.pojo.User">
+        select * from user where mailbox=#{mailbox};
     </select>
 
     <select id="select" resultType="com.liuyang.pojo.User" >
         select * from user where (mailbox = #{mailbox}) and (password = #{password});
+    </select>
+
+    <select id="findByUname" resultType="com.liuyang.pojo.User">
+        select * from user where username=#{username};
     </select>
 
 

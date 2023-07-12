@@ -24,5 +24,9 @@
         select * from user where (mailbox = #{mailbox}) and (password = #{password});
     </select>
 
+    <select id="findByUname" resultType="com.liuyang.pojo.User">
+        select * from user where username=#{username};
+    </select>
+
 
 </mapper>

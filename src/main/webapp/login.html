@@ -10,18 +10,18 @@
       <div class="container">
            <div class="header">
                  <h1>登录</h1>
+               <h6></h6>
            </div>
            <div class="main">
-               <form action="/Ly/loginServlet" method="get">
-
+               <form action="/Ly/loginServlet" method="post" id="loginFrom">
                <span>
                    <i class="fa fa-user"></i>
-                   <input type="text" id="mailboxInput"  name="mailbox" placeholder="邮箱" pattern="^[1-9][0-9]{4,}@qq.com$" required title="请输入正确邮箱格式"><br>
+                   <input type="text" id="mailboxInput" name="mailbox" placeholder="邮箱" pattern="^[1-9][0-9]{4,}@qq.com$" required title="请输入正确邮箱格式"><br>
                </span><br>
 
                <span>
                   <i class="fa fa-lock"></i>
-                  <input type="password" id="passwordInput" name="password" placeholder="密码" pattern="^(?!\d+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]{8,16}$" required title="请输入长度在8~12之间包含大小写字母和数字至少两种"><br>
+                  <input type="password" id="passwordInput"  name="password" placeholder="密码" pattern="^(?!\d+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]{8,16}$" required title="请输入长度在8~12之间包含大小写字母和数字至少两种"><br>
                </span><br>
 
                <div id="subDiv">
@@ -34,6 +34,7 @@
           </div>
       </div>
       <script src="js/login.js"></script>
+      <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
   </body>
 </html>
 

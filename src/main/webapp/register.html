@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>登录页面</title>
+        <title>注册页面</title>
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="css/register.css">
     </head>
@@ -10,31 +10,33 @@
         <div class="container">
 
             <div class="header">
-                <h1>注册</h1>
+                <h1>注册</h1><br>
+                <span id="uname_err" class="err_msg" style="display: none">该名字已被使用</span>
             </div>
 
             <div class="main">
-                <form>
+                <form action="/Ly/enrollServlet" method="post">
 
                     <span>
                         <i class="fa fa-user"></i>
-                        <input type="text" placeholder="昵称" required>
+                        <input type="text" id="unameInput" name="uname" placeholder="昵称" required><br>
+                        <span id="mailbox_err" class="err_msg" style="display: none">该邮箱已被使用</span>
                     </span><br>
 
                     <span>
                         <i class="fa fa-envelope"></i>
-                        <input type="text" placeholder="邮箱" pattern="^[1-9][0-9]{4,}@qq.com$" required title="请输入正确的邮箱格式">
+                        <input type="text" name="mailbox" id="mailboxInput" placeholder="邮箱" pattern="^[1-9][0-9]{4,}@qq.com$" required title="请输入正确的邮箱格式"><br>
                     </span><br>
 
                     <span>
                         <i class="fa fa-lock"></i>
-                        <input type="password" id="passwordInput" placeholder="密码" pattern="^(?!\d+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]{8,16}$" required title="请输入长度在8~12之间包含大小写字母和数字至少两种">
+                        <input type="password" name="password" id="passwordInput" placeholder="密码" pattern="^(?!\d+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]{8,16}$" required title="请输入长度在8~12之间包含大小写字母和数字至少两种"><br>
                     </span><br>
 
                     <span>
                         <i class="fa fa-eye"></i>
-                        <input id="Captcha" type="text" placeholder="验证码" required>
-                        <input id="sendCaptcha" type="button" value="发送">
+                        <input id="Captcha" type="text" name="captcha" placeholder="验证码" required>
+                        <input id="sendCaptcha" type="button" class="button" value="发送"><br>
                     </span><br>
 
                     <div id="subDiv">
@@ -46,6 +48,8 @@
                 </form>
             </div>
         </div>
+        <script src="js/register.js"></script>
+        <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
     </body>
 </html>
 
