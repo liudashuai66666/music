@@ -8,6 +8,8 @@ public class User {
     private String sex;
     private String signature;
 
+    private String avatar;
+
     public String getMailbox() {
         return mailbox;
     }
@@ -56,6 +58,14 @@ public class User {
         this.signature = signature;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -65,6 +75,7 @@ public class User {
                 ", age=" + age +
                 ", sex='" + sex + '\'' +
                 ", signature='" + signature + '\'' +
+                ", avatar='" + avatar + '\'' +
                 '}';
     }
 }

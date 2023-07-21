@@ -140,7 +140,7 @@ body{
 
 #subDiv input:active{
     box-shadow:2px 2px 5px #555;
-    /* 鼠标悬停时添加阴影效果 */
+    /* 鼠标点击时添加阴影效果 */
     background-color: #3c6db0;
     /* 背景颜色变为darkturquoise */
 }

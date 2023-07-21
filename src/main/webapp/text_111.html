@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .search-container {
+        position: relative;
+        width: 200px;
+      }
+
+      .dropdown-content {
+        width: 200px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-left: 1px solid rgb(211,211,211); /* 左边界线样式 */
+        border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+        border-right: 1px solid rgb(211,211,211); /* 右边界线样式 */
+        border-top: 1px solid rgb(211,211,211); /* 右边界线样式 */
+        /* 其他样式设置 */
+      }
+
+      .kuang{
+        width: 100%;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <input id="searchInput" type="text" placeholder="搜索">
+      <div id="searchDropdown" class="dropdown-content">
+        <div class="kuang">
+          1111111
+        </div>
+        <div class="kuang">
+          2222222
+        </div>
+        <div class="kuang">
+          3333333
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const searchInput = document.getElementById('searchInput');
+      const searchDropdown = document.getElementById('searchDropdown');
+
+      searchInput.addEventListener('focus', function() {
+        // 当搜索框获得焦点时，显示下拉选择框
+        searchDropdown.style.display = 'block';
+      });
+
+      document.addEventListener('click', function(event) {
+        if (!searchInput.contains(event.target)) {
+          // 如果点击事件不是在搜索框内部触发的，则收起下拉选择框
+          searchDropdown.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -16,5 +16,7 @@
     </environments>
     <mappers>
         <mapper resource="com/liuyang/mapper/UserMapper.xml"/>
+        <mapper resource="com/liuyang/mapper/PlaylistMapper.xml"/>
+        <mapper resource="com/liuyang/mapper/SongMapper.xml"/>
     </mappers>
 </configuration>

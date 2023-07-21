@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="IncorrectHttpHeaderInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="customHeaders">
+        <set>
+          <option value="Long-Token" />
+          <option value="Short-Token" />
+          <option value="token" />
+          <option value="login_token" />
+          <option value="long_token" />
+        </set>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

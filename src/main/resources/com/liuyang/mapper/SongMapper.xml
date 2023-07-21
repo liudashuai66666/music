@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuyang.mapper.SongMapper">
+
+
+    <select id="selectALL" resultType="com.liuyang.pojo.Song">
+        select * from song;
+    </select>
+    <select id="selectLike" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM song WHERE id IN (SELECT song_id FROM `like` WHERE uname = #{uname}) LIMIT 10;
+    </select>
+</mapper>

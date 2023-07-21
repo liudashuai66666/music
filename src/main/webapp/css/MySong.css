@@ -1,0 +1,477 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;  /* 设置字体为Arial或sans-serif字体族 */
+    margin: 0;                      /* 清除外边距 */
+    padding: 0;                     /* 清除内边距 */
+}
+
+/* 头部样式 */
+.header {
+    display: flex;                  /* 使用弹性布局 */
+    align-items: center;            /* 垂直居中对齐 */
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    color: #fff;                    /* 设置文字颜色为白色 */
+    /*padding: 10px;*/                  /* 上下左右各10像素的内边距 */
+    justify-content: center;        /* 元素居中对齐 */
+}
+
+.header h2 {
+    padding-right: 5px;             /* 右侧添加5像素的内边距 */
+    margin-top: 10px;
+    margin-bottom: -3px;
+}
+
+#logo a{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFFFFF;
+}
+
+/* 导航样式 */
+.nuv1 {
+    display: flex;                  /* 使用弹性布局 */
+    list-style-type: none;          /* 清除列表样式 */
+    padding: 0;                     /* 清除内边距 */
+    margin: 0;                      /* 清除外边距 */
+}
+
+.nuv1 li {
+    margin-top: 15px;
+    margin-bottom: 24.2px;
+    justify-content: center;
+}
+
+.nuv1 li:last-child {
+    margin-right: 0;                /* 最后一个菜单项去除右侧外边距 */
+}
+
+.nuv1 a{
+    padding-top: 16px;
+    padding-bottom: 23px;
+}
+
+.nuv1 a:hover{
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: rgb(0,0,0);
+    /* 背景颜色变为#7799d4（浅蓝色） */
+}
+
+a{
+    text-decoration: none;          /* 去除链接下划线 */
+    /*float: left;*/                  /* 左浮动 */
+}
+
+.nuv1 a{
+    padding-left: 17px;
+    padding-right: 17px;
+    color: #FFFFFF;
+}
+
+/* 主内容样式 */
+
+/* 页脚样式 */
+footer {
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    padding: 10px;                  /* 上下左右各10像素的内边距 */
+    text-align: center;             /* 文字居中对齐 */
+}
+
+#SearchInput{
+    background-color: rgba(225,225,225,1);
+    /*透明度*/
+    border-radius: 15px;
+    /*圆角边框*/
+    width: 200px;
+    height: 30px;
+    /* 输入框和按钮的宽高 */
+    border: none;
+    /* 去除边框 */
+    outline: none;
+    /* 去除选中时的边框样式 */
+    padding-left: 30px;
+    /* 左内边距 */
+    box-sizing: border-box;
+    /* 盒模型为border-box */
+    font-size: 15px;
+    /* 字体大小 */
+    color: #333333;
+    /* 文字颜色为#333333（深灰色） */
+    margin-bottom: 0;
+    /* 底部外边距 */
+    margin-right: 15px;
+    margin-top: 13px;
+}
+
+.header img{
+    width: 30px;
+    height: 30px;
+    margin-top: 13px;
+    border-radius: 15px;
+}
+
+#logoImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 0;
+    margin-top: 9px;
+}
+
+.header div{
+    display: flex;
+}
+
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.nav li {
+    margin: 0 10px; /* 为每个导航项之间设置一定的间距 */
+    margin-top: -5px;
+}
+
+.nav a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 13px; /* 设置字体大小为 12 像素 */
+    border-radius: 15px;
+}
+
+.nav a:hover{
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: rgb(155, 9, 9);
+    /* 背景颜色变为#7799d4（浅蓝色） */
+}
+
+/*
+---------------------------------------
+*/
+/*main内容*/
+.label-img{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+.main{
+    display: block;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+main-head
+个人信息，关注，粉丝，头像，姓名等
+*/
+.main-head{
+    text-align: center;
+    display: block;
+    height: 315px;
+    padding-top: 65px;
+    background: url("../img/background.webp");
+    background-size: cover; /* 或者使用 contain，具体根据需要选择 */
+    background-position: center; /* 调整背景图片的位置 */
+}
+
+.head-content{
+    width: 1200px;
+    height: 315px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.avatar{
+    position: relative;
+    width: 102px;
+    height: 102px;
+    margin: 0 auto;
+}
+.avatar-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    border-radius: 99px;
+    background: #fff;
+}
+.my-name{
+    height: 64px;
+}
+.name{
+    padding-top: 8px;
+    height: 56px;
+    width: 102px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center; /* 将文本水平居中 */
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden; /* 隐藏溢出部分 */
+    text-overflow: ellipsis; /* 使用省略号表示被隐藏的部分 */
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.concern-fans{
+    height: 40px;
+    margin: 4px 15px 26px;
+    overflow: hidden;
+    font-size: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.concern-fans li{
+    height: 44px;
+    width: 28px;
+    padding: 0 25px;
+    display: block;
+}
+
+.my-fans{
+    border-left: 1px solid rgb(36, 49, 61); /* 右边界线样式 */
+}
+.my-concern a{
+    width: 28px;
+    height: 44px;
+    display: block;
+    padding: 0;
+}
+.quantity{
+    font-size: 22px;
+    display: block;
+    margin-top: -1px;
+    width: 28px;
+    height: 24px;
+    color: #FFFFFF;
+}
+
+.concern-fans-a:hover .quantity{
+    color: rgb(49, 194, 124);
+}
+
+.flag{
+    font-size: 14px;
+    display: block;
+    width: 28px;
+    height: 21px;
+    color: #FFFFFF;
+}
+/*
+------------------------------------------------
+*/
+/*
+main-body
+歌曲列表和导航栏
+*/
+.main-body{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+.choose1{
+    height: 56px;
+    position: absolute;
+    top: -56px;
+    left: 0;
+    margin-bottom: 0;
+    width: 80%;
+    display: flex;
+}
+.choose2{
+    display: flex;
+    height: 56px;
+    margin-bottom: -20px;
+}
+.choose1-class{
+    color: #FFFFFF;
+    position: relative;
+    float: left;
+    font-size: 16px;
+    overflow: hidden;
+    margin-right: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.choose2-class{
+    color: #333333;
+    position: relative;
+    float: left;
+    font-size: 16px;
+    overflow: hidden;
+    margin-right: 55px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.choose1-class:hover{
+    color: rgb(49, 194, 124);
+}
+.choose2-class:hover{
+    color: rgb(49, 194, 124);
+}
+.list-button{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 0;
+    display: flex;
+    padding-top: 50px;
+    height: 38px;
+}
+
+.button {
+    border-radius: 2px;  /* 设置按钮的边框半径为2px，实现圆角效果 */
+    font-size: 14px;  /* 设置按钮的字体大小为14像素 */
+    margin-right: 6px;  /* 设置按钮的右边距为6像素 */
+    padding: 0 23px;  /* 设置按钮的内边距，上下为0，左右为23像素 */
+    height: 38px;  /* 设置按钮的高度为38像素 */
+    line-height: 38px;  /* 设置按钮的行高为38像素，实现垂直居中对齐效果 */
+    display: inline-block;  /* 将按钮显示为行内块元素，让多个按钮水平排列 */
+    white-space: nowrap;  /* 设置按钮内部的文本不换行显示 */
+    box-sizing: border-box;  /* 设置盒模型为border-box，确保元素的尺寸计算包括边框和内边距 */
+    overflow: hidden;  /* 设置按钮内部内容溢出隐藏，防止内容超出按钮显示范围 */
+    border-left: 1px solid rgb(211,211,211);  /* 设置按钮的左边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-bottom: 1px solid rgb(211,211,211);  /* 设置按钮的下边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-right: 1px solid rgb(211,211,211);  /* 设置按钮的右边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-top: 1px solid rgb(211,211,211);  /* 设置按钮的上边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    color: #333333;
+}
+.play-song{
+    background-color: rgb(44, 175, 111);
+    color: #FFFFFF;
+}
+.song-ing-div{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.song-img{
+    border-radius: 8px;
+    height: 32px;
+    width: 32px;
+}
+.song-title {
+    display: flex;
+    height: 50px;
+    padding-left: 50px;
+    padding-right: 0px;
+    margin: 0;
+    list-style-type: none;
+    line-height: 50px;
+    color: rgb(153, 153, 153);
+}
+.song-list{
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 120px;
+}
+.song-name-div{
+    display: flex;
+    align-items: center;
+    width: 519.25px;
+}
+.song-name-title{
+    width: 519.25px;
+}
+.song-author-div{
+    display: flex;
+    align-items: center;
+    width: 236.80px;
+    padding-left: 15px;
+}
+.song-author-title{
+    width: 236.80px;
+    padding-left: 15px;
+}
+.song-album-div{
+    display: flex;
+    width: 236.80px;
+    padding-left: 15px;
+    align-items: center;
+}
+.song-album-title{
+    width: 236.80px;
+    padding-left: 15px;
+}
+.song-time-div{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    padding-left: 70px;
+}
+.song-time-title{
+    width: 50px;
+    padding-left: 70px;
+}
+
+.song{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 50px;
+    padding-left: 0;
+    padding-right: 0px;
+}
+.song a{
+    display: flex;
+    color: #333333;
+    overflow: hidden;  /* 设置按钮内部内容溢出隐藏，防止内容超出按钮显示范围 */
+    white-space: nowrap;  /* 设置按钮内部的文本不换行显示 */
+    align-items: center;
+}
+
+.song:hover{
+    background-color: rgb(242, 243, 245);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

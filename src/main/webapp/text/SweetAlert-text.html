@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SweetAlert</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="text-center col-md-2 offset-md-1" style="margin-top: 120px">
+          <button id="btn1-1" class="btn btn-primary btn-lg d-block m-3">效果1-1</button>
+          <button id="btn1-2" class="btn btn-primary btn-lg d-block m-3">效果1-2</button>
+        </div>
+
+        <div class="text-center col-md-2" style="margin-top: 120px; margin-left: -150px">
+          <button id="btn2-1" class="btn btn-info btn-lg d-block m-3">效果2-1</button>
+          <button id="btn2-2" class="btn btn-success btn-lg d-block m-3">效果2-2</button>
+          <button id="btn2-3" class="btn btn-warning btn-lg d-block m-3">效果2-3</button>
+          <button id="btn2-4" class="btn btn-danger btn-lg d-block m-3">效果2-4</button>
+        </div>
+
+        <div class="text-center col-md-2" style="margin-top: 120px; margin-left: -150px">
+          <button id="btn3-1" class="btn btn-danger btn-lg d-block m-3">效果3-1</button>
+          <button id="btn3-2" class="btn btn-warning btn-lg d-block m-3">效果3-2</button>
+          <button id="btn3-3" class="btn btn-success btn-lg d-block m-3">效果3-3</button>
+          <button id="btn3-4" class="btn btn-info btn-lg d-block m-3">效果3-4</button>
+        </div>
+
+        <div class="text-center col-md-2" style="margin-top: 120px; margin-left: -150px">
+          <button id="btn4-1" class="btn btn-secondary btn-lg d-block m-3">效果4-1</button>
+          <button id="btn4-2" class="btn btn-secondary btn-lg d-block m-3">效果4-2</button>
+          <button id="btn4-3" class="btn btn-primary btn-lg d-block m-3">效果4-3</button>
+          <button id="btn4-4" class="btn btn-primary btn-lg d-block m-3">效果4-4</button>
+        </div>
+
+
+        <div class="text-center col-md-2" style="margin-top: 120px; margin-left: -150px">
+          <button id="btn5-1" class="btn btn-success btn-lg d-block m-3">效果5-1</button>
+          <button id="btn5-2" class="btn btn-success btn-lg d-block m-3">效果5-2</button>
+          <button id="btn5-3" class="btn btn-info btn-lg d-block m-3">效果5-3</button>
+          <button id="btn5-4" class="btn btn-info btn-lg d-block m-3">效果5-4</button>
+        </div>
+
+
+        <div class="text-center col-md-2" style="margin-top: 120px; margin-left: -150px">
+          <button id="btn6-1" class="btn btn-danger btn-lg d-block m-3">效果6-1</button>
+          <button id="btn6-2" class="btn btn-danger btn-lg d-block m-3">效果6-2</button>
+          <button id="btn6-3" class="btn btn-warning btn-lg d-block m-3">效果6-3</button>
+          <button id="btn6-4" class="btn btn-warning btn-lg d-block m-3">效果6-4</button>
+        </div>
+
+
+        <div class="text-center col-md-2" style="margin-top: 120px; margin-left: -150px">
+          <button id="btn7-1" class="btn btn-danger btn-lg d-block m-3">效果7-1</button>
+          <button id="btn7-2" class="btn btn-danger btn-lg d-block m-3">效果7-2</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $('#btn1-1').click(function () {
+        swal('我是 Title')
+      })
+      $('#btn1-2').click(function () {
+        swal({
+          title: '我是 Title',
+          text: '我是 Text'
+        })
+      })
+
+
+      $('#btn2-1').click(function () {
+        swal({
+          title: '我是类型 Info',
+          type: 'info',
+        })
+      })
+      $('#btn2-2').click(function () {
+        swal({
+          title: '我是类型 Success',
+          type: 'success',
+        })
+      })
+      $('#btn2-3').click(function () {
+        swal({
+          title: '我是类型 Warning',
+          type: 'warning',
+        })
+      })
+      $('#btn2-4').click(function () {
+        swal({
+          title: '我是类型 Error',
+          type: 'error',
+        })
+      })
+
+
+      $('#btn3-1').click(function () {
+        swal({
+          title: '弹窗效果：砰',
+          animation: 'pop',
+
+        })
+      })
+      $('#btn3-2').click(function () {
+        swal({
+          title: '弹窗效果：无',
+          animation: 'none',
+        })
+      })
+      $('#btn3-3').click(function () {
+        swal({
+          title: '弹窗效果：顶部下滑',
+          animation: 'slide-from-top',
+        })
+      })
+      $('#btn3-4').click(function () {
+        swal({
+          title: '弹窗效果：底部上滑',
+          animation: 'slide-from-bottom',
+        })
+      })
+
+
+      $('#btn4-1').click(function () {
+        swal({
+          title: '不显示取消按钮',
+        })
+      })
+      $('#btn4-2').click(function () {
+        swal({
+          title: '显示取消按钮',
+          showCancelButton: 'true',
+        })
+      })
+      $('#btn4-3').click(function () {
+        swal({
+          title: '设置确认、取消按钮文字',
+          showCancelButton: 'true',
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+        })
+      })
+      $('#btn4-4').click(function () {
+        swal({
+          title: '设置确认、取消按钮的class',
+          showCancelButton: 'true',
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          confirmButtonClass: 'btn btn-success',
+          cancelButtonClass: 'btn btn-outline-warning',
+        })
+      })
+
+
+      $('#btn5-1').click(function () {
+        swal({
+          title: '普通效果',
+        })
+      })
+      $('#btn5-2').click(function () {
+        swal({
+          title: '点击其他地方 关闭弹窗',
+          allowOutsideClick: 'true',
+        })
+      })
+      $('#btn5-3').click(function () {
+        swal({
+          title: '点击确认按钮 关闭弹窗',
+          closeOnConfirm: 'true',
+        })
+      })
+      $('#btn5-4').click(function () {
+        swal({
+          title: '点击确认按钮 不关闭弹窗',
+          closeOnConfirm: 'false',
+          allowOutsideClick: 'true',
+        })
+      })
+
+
+      $('#btn6-1').click(function () {
+        swal({
+          title: '显示图片',
+          imageUrl: 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png',
+        })
+      })
+      $('#btn6-2').click(function () {
+        swal({
+          title: '显示图片+设置大小',
+          imageUrl: 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png',
+          imageSize: '300x110',
+        })
+      })
+      $('#btn6-3').click(function () {
+        swal({
+          title: '弹框0.5秒后自动关闭',
+          timer: 500,
+        })
+      })
+      $('#btn6-4').click(function () {
+        swal({
+          title: '弹框2秒后自动关闭',
+          timer: 2000,
+        })
+      })
+
+
+      $('#btn7-1').click(function () {
+        swal({
+          title: '插入HTML',
+          text: '' +
+                  '<h1>我是1级标题</h1>' +
+                  '<h2>我是2级标题</h2>' +
+                  '<h3>我是3级标题</h3>' +
+                  '<h4>我是4级标题</h4>' +
+                  '<h5>我是5级标题</h5>' +
+                  '<h6>我是6级标题</h6>'
+          ,
+          html: 'true',
+        })
+      })
+      $('#btn7-2').click(function () {
+        swal({
+          title: '确认删除？',
+          text: '删除后将无法恢复',
+          showCancelButton: 'true',
+          confirmButtonText: '确认',
+          cancelButtonText: '取消',
+        }, function (isConfirm) {
+          if (isConfirm) {
+            setTimeout(function () {
+              swal({
+                title: '删除成功',
+                type: 'success',
+                timer: 1000,
+              })
+            }, 200)
+
+          }
+        })
+      })
+
+    </script>
+
+  </body>
+</html>

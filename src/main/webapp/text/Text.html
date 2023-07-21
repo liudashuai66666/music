@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>网易云轮播图</title>
+    <style>
+      #slider-body {
+        display: flex;
+        justify-content: center;
+      }
+      .slider {
+        width: 1000px;
+        height: 388.88px;
+        overflow: hidden;
+        position: relative;
+        display: inline-flex;
+      }
+
+      .slider-content {
+        display: flex;
+        width: fit-content;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider-item {
+        width: 1000px;
+        height: 388.88px;
+        flex-shrink: 0;
+      }
+
+      .slider-item img {
+        width: 1000px;
+        max-height: 100%;
+        object-fit: cover;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="slider-body">
+      <div class="slider">
+        <div class="slider-content">
+          <div class="slider-item" id="slider-item1">
+            <img src="/img/song/Carouselmap2.jpg" alt="Image 1">
+          </div>
+          <div class="slider-item">
+            <img src="/img/song/Carouselmap1.jpg" alt="Image 2">
+          </div>
+          <div class="slider-item">
+            <img src="/img/song/Carouselmap3.jpg" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部框-->
+    <footer>
+      <div class="footer_list">
+        <div class="footer-left">
+          <img src="/img/song/一路之下.webp" alt="Song Image">
+          <div class="song-details">
+            <p class="song-name">恐龙抗狼</p>
+            <p class="artist-name">刘洋</p>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <div class="footer-btn">
+            <a href="#" class="prev fa fa-backward-fast"></a>
+            <a href="#" class="play fa fa-circle-play"></a>
+            <a href="#" class="pause fa fa-circle-pause"></a>
+            <a href="#" class="next fa fa-forward-fast"></a>
+          </div>
+          <div class="progress-bar">
+            <span class="current-time">00:00</span>
+            <input type="range" max="1" min="0" step="0.1">
+            <span class="total-time">00:00</span>
+          </div>
+        </div><!---->
+        <div class="footer-right">
+          <a href="#" class="volume fa fa-volume-up"></a>
+          <a href="#" class="play-mode fa fa-random"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+    <script>
+      const slider = document.querySelector('.slider');
+      const sliderContent = document.querySelector('.slider-content');
+      const sliderItems = document.querySelectorAll('.slider-item');
+
+      let currentIndex = 0;
+      let interval;
+
+      function startSlider() {
+        interval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % sliderItems.length;
+          updateSlider();
+        }, 3000);
+      }
+
+      function updateSlider() {
+        sliderContent.style.transform = `translateX(-${currentIndex * (100 / sliderItems.length)}%)`;
+      }
+
+      startSlider();
+    </script>
+  </body>
+</html>

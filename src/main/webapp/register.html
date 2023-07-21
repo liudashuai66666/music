@@ -3,19 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>注册页面</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="css/register.css">
+
+        <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet">
+        <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" rel="stylesheet">
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+
     </head>
     <body>
-        <div class="container">
+        <div class="container1">
 
             <div class="header">
-                <h1>注册</h1><br>
+                <h1 class="title">注册</h1><br>
                 <span id="uname_err" class="err_msg" style="display: none">该名字已被使用</span>
             </div>
 
             <div class="main">
-                <form action="/Ly/enrollServlet" method="post">
+                <form action="/Ly/enrollServlet" id="enrollFrom" method="post">
 
                     <span>
                         <i class="fa fa-user"></i>
@@ -44,12 +53,12 @@
                         <br>
                         <input type="submit" class="button" value="注册">
                     </div>
-
                 </form>
             </div>
         </div>
         <script src="js/register.js"></script>
-        <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
     </body>
 </html>
 

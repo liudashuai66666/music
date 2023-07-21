@@ -9,7 +9,7 @@ body{
     /* 背景图片按比例缩放以填充整个容器 */
 }
 
-.container{
+.container1{
     width: 380px;
     margin: 4% auto;
     /* 居中对齐 */
@@ -28,13 +28,15 @@ body{
     /* 顶部内边距 */
 }
 
-.header h1{
+.title{
     color: #333;
     /* 文字颜色为#333（深灰色） */
     font-size: 45px;
     /* 字体大小 */
     margin-bottom: 25px;
     /* 底部外边距 */
+    margin-top: 30.15px;
+    font-weight: bold;
 }
 
 .main{
