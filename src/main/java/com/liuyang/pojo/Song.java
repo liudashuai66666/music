@@ -10,7 +10,14 @@ public class Song {
     private String href;
     private String time;
     private String album;//专辑
+    private String state;//状态
+    /*
+    * 审核中
+    * 已发布
+    * 审核未通过
+    * */
 
+    private String createTime;//创建时间
     public int getId() {
         return id;
     }
@@ -83,6 +90,22 @@ public class Song {
         this.album = album;
     }
 
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     @Override
     public String toString() {
         return "Song{" +
@@ -95,6 +118,8 @@ public class Song {
                 ", href='" + href + '\'' +
                 ", time='" + time + '\'' +
                 ", album='" + album + '\'' +
+                ", state='" + state + '\'' +
+                ", createTime='" + createTime + '\'' +
                 '}';
     }
 }

@@ -2,107 +2,75 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>网易云轮播图</title>
     <style>
-      #slider-body {
+      /* CSS 样式 */
+      #pagination {
         display: flex;
-        justify-content: center;
-      }
-      .slider {
-        width: 1000px;
-        height: 388.88px;
-        overflow: hidden;
-        position: relative;
-        display: inline-flex;
+        justify-content: flex-start;
       }
 
-      .slider-content {
+      .option-box {
+        margin-right: 10px;
+      }
+
+      .option-box select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+      }
+
+      .page-numbers {
         display: flex;
-        width: fit-content;
-        height: 100%;
-        transition: transform 0.5s ease-in-out;
       }
 
-      .slider-item {
-        width: 1000px;
-        height: 388.88px;
-        flex-shrink: 0;
+      .page-number {
+        margin-right: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+        cursor: pointer;
       }
-
-      .slider-item img {
-        width: 1000px;
-        max-height: 100%;
-        object-fit: cover;
-      }
-
     </style>
   </head>
   <body>
-    <div id="slider-body">
-      <div class="slider">
-        <div class="slider-content">
-          <div class="slider-item" id="slider-item1">
-            <img src="/img/song/Carouselmap2.jpg" alt="Image 1">
-          </div>
-          <div class="slider-item">
-            <img src="/img/song/Carouselmap1.jpg" alt="Image 2">
-          </div>
-          <div class="slider-item">
-            <img src="/img/song/Carouselmap3.jpg" alt="Image 3">
-          </div>
-        </div>
+    <div id="pagination">
+      <div class="option-box">
+        <span>每页显示：</span>
+        <select id="page-size">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+      <div class="page-numbers">
+        <span class="page-number">1</span>
+        <span class="page-number">2</span>
+        <span class="page-number">3</span>
+        <!-- 更多页码... -->
       </div>
     </div>
-    <!-- 底部框-->
-    <footer>
-      <div class="footer_list">
-        <div class="footer-left">
-          <img src="/img/song/一路之下.webp" alt="Song Image">
-          <div class="song-details">
-            <p class="song-name">恐龙抗狼</p>
-            <p class="artist-name">刘洋</p>
-          </div>
-        </div>
-        <div class="footer-middle">
-          <div class="footer-btn">
-            <a href="#" class="prev fa fa-backward-fast"></a>
-            <a href="#" class="play fa fa-circle-play"></a>
-            <a href="#" class="pause fa fa-circle-pause"></a>
-            <a href="#" class="next fa fa-forward-fast"></a>
-          </div>
-          <div class="progress-bar">
-            <span class="current-time">00:00</span>
-            <input type="range" max="1" min="0" step="0.1">
-            <span class="total-time">00:00</span>
-          </div>
-        </div><!---->
-        <div class="footer-right">
-          <a href="#" class="volume fa fa-volume-up"></a>
-          <a href="#" class="play-mode fa fa-random"></a>
-        </div>
-      </div>
-    </footer>
-  </body>
+
     <script>
-      const slider = document.querySelector('.slider');
-      const sliderContent = document.querySelector('.slider-content');
-      const sliderItems = document.querySelectorAll('.slider-item');
+      // 通过 ID 获取页码元素和每页显示的选项框元素
+      const pageNumbers = document.querySelectorAll('.page-number');
+      const pageSizeSelect = document.getElementById('page-size');
 
-      let currentIndex = 0;
-      let interval;
+      // 创建一个事件监听器，监听页码的点击事件
+      pageNumbers.forEach((pageNumber) => {
+        pageNumber.addEventListener('click', () => {
+          // 根据点击的页码来加载相应的内容
+          const selectedPage = pageNumber.innerText;
+          // 做相关的处理，例如根据选中的页码发送 AJAX 请求获取对应的数据等
+          console.log(`加载页面 ${selectedPage}`);
+        });
+      });
 
-      function startSlider() {
-        interval = setInterval(() => {
-          currentIndex = (currentIndex + 1) % sliderItems.length;
-          updateSlider();
-        }, 3000);
-      }
-
-      function updateSlider() {
-        sliderContent.style.transform = `translateX(-${currentIndex * (100 / sliderItems.length)}%)`;
-      }
-
-      startSlider();
+      // 创建一个事件监听器，监听选项框的变化事件
+      pageSizeSelect.addEventListener('change', (event) => {
+        const pageSize = event.target.value;
+        // 做相关的处理，例如根据选中的每页显示数量重新加载内容等
+        console.log(`每页显示数量变为 ${pageSize}`);
+      });
     </script>
   </body>
 </html>

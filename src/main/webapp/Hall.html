@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+
+        <!--弹窗-->
+
+        <link rel="stylesheet" href="css/Hall.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nav1" id="nav1">
+                        <li><a href="#" class="nac-choose" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="MySong.html" class="nac-choose" id="MySong-nav">我的音乐</a></li>
+                        <li><a href="community.html" class="nac-choose">社区</a></li>
+                        <li><a href="#" class="nac-choose">音乐人</a></li>
+                        <li><a class="nac-choose" id="manage-div">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+                <div id="my-msg-control">
+                    <ul id="msg-control-ul">
+                        <li class="msg-control-li" id="change-msg-button">修改资料</li>
+                        <li class="msg-control-li" id="Back-off-login">退出登录</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content1">
+            <div id="g_nav2">
+                <div class="choices">
+                    <ul class="nav">
+                        <li><a id="recommend-nav">推荐</a></li>
+                        <li><a href="Ranking.html" id="ranking-nav">排行榜</a></li>
+                        <li><a href="Playlist.html" id="playlist-nav">歌单</a></li>
+                        <li><a href="#">主播电台</a></li>
+                        <li><a href="Singer.html">歌手</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content2">
+                <div class="hall-body" id="hall-body">
+                    <div id="slider-body">
+                        <div class="slider">
+                            <div class="slider-content">
+                                <div class="slider-item" id="slider-item1">
+                                    <img src="img/song/Carouselmap2.jpg" alt="Image 1">
+                                </div>
+                                <div class="slider-item">
+                                    <img src="img/song/Carouselmap1.jpg" alt="Image 2">
+                                </div>
+                                <div class="slider-item">
+                                    <img src="img/song/Carouselmap3.jpg" alt="Image 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" id="content3">
+                        <div class="content-all">
+                            <div id="content-left">
+                                <div id="recommend">
+                                    <div class="r-hd">
+                                        <div class="tab">
+                                            <img src="img/flag.png" class="label-img">
+                                            <a href="#" class="r-hd-tit recommend-title">热门推荐</a>
+                                            <a href="Playlist.html" class="tab-s">华语</a>
+                                            <span class="line">|</span>
+                                            <a href="Playlist.html" class="tab-s">流行</a>
+                                            <span class="line">|</span>
+                                            <a href="Playlist.html" class="tab-s">欧美</a>
+                                            <span class="line">|</span>
+                                            <a href="Playlist.html" class="tab-s">说唱</a>
+                                            <span class="line">|</span>
+                                            <a href="Playlist.html" class="tab-s">纯音乐</a>
+                                        </div>
+                                    </div>
+                                    <ul class="recommend-list" id="recommend-list">
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song9.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song8.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song7.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song6.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song5.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song4.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song3.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song2.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+
+                                    </ul>
+                                    <div class="r-hd">
+                                        <div class="tab">
+                                            <img src="img/flag.png" class="label-img">
+                                            <a href="#" class="r-hd-tit recommend-title">个性化推荐</a>
+                                        </div>
+                                    </div>
+                                    <ul class="recommend-list" id="recommend-Personality">
+                                        <li class="recommend-list-li recommend-Hot">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song8.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li recommend-Hot">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song6.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li recommend-Hot">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song4.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                        <li class="recommend-list-li recommend-Hot">
+                                            <div class="recommend-cnt">
+                                                <img src="img/playlist/song2.jpg" class="playlist-img">
+                                                <a href="#" title="假如能回到过去，你想做什么"
+                                                   class="img-msk">假如能回到过去，你想做什么</a>
+                                            </div>
+                                            <p class="dec">
+                                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                                   href="#">假如能回到过去，你想做什么</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="content-right">
+                                <div class="my">
+                                    <div class="recommend-cnt my-msg">
+                                        <img src="img/flag.png" class="avt-img my-avatar">
+                                        <a href="#" title="个人信息" class="img-msk avt-a "></a>
+                                    </div>
+                                    <div class="my-info">
+                                        <a href="#" class="my-info-name">刘大帅</a>
+                                        <p class="my-info-js">泰酷辣！1111</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="change-my-msg">
+            <div id="change-div">
+                <div id="change-msg">
+                    <p1>个人设置</p1>
+                    <span>昵称</span>
+                    <input type="text" id="change-name">
+                    <span>介绍</span>
+                    <textarea id="signature"></textarea>
+                    <button id="no-button">取消</button>
+                </div>
+                <div id="change-img-div">
+                    <img src="img/avatar/avatar1.jpg" id="change-img">
+                    <button id="ok-button">保存</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+        <script src="js/Hall.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

@@ -1,0 +1,303 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif; /* 设置字体为Arial或sans-serif字体族 */
+    margin: 0; /* 清除外边距 */
+    padding: 0; /* 清除内边距 */
+}
+
+#main {
+    display: flex;
+    height: 745.6px;
+    width: 100%;
+    background-color: rgb(138, 90, 87);
+}
+
+#play-content {
+    height: 100%;
+    margin-left: 153px;
+    padding: 0 16px;
+}
+
+#song-audio {
+    margin-left: 100px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#song-img-div {
+    width: 460px;
+    height: 460px;
+    margin: 50px 100px 20px 0;
+}
+
+#song-img {
+    width: 460px;
+    height: 460px;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+#song-name {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#song-author-div {
+    width: 459px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#song-author {
+    font-size: 16px;
+    color: rgb(193, 175, 174);
+}
+
+#download{
+    font-size: 16px;
+    color: rgb(193, 175, 174);
+    cursor: pointer;
+}
+#download:hover{
+    color: #31c27c;
+}
+.list-body-progress {
+    display: flex;
+    height: 22px;
+    width: 496px;
+    margin-top: 4px;
+}
+
+.used-time1 {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-right: 8px;
+    color: white;
+}
+
+.used-time2 {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+.range {
+    width: 370px;
+    height: 22px;
+    margin-bottom: 5px;
+}
+
+
+.list-body-content {
+    margin-top: 20px;
+    display: flex;
+    height: 60px;
+    width: 460px;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+}
+
+.body-content-button {
+    display: flex;
+    width: 180Px;
+    height: 60px;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    margin-left: 5px;
+}
+
+.content-button {
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.content-button:hover {
+    background-color: rgb(158, 110, 107);
+    border-radius: 15px;
+}
+
+.content-button i {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center;
+    color: white;
+}
+#song-volume {
+    position: relative;
+}
+
+#volume {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    top: 670px;
+    left: 710px;
+}
+#song-list-div {
+    height: 745.6px;
+    width: 620px;
+}
+#clean-div {
+    padding-left: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#clean-button {
+    width: 80px;
+    height: 30px;
+    margin-left: auto;
+    font-size: 16px;
+    color: aliceblue;
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clean-button:hover{
+    cursor: pointer;
+    color: rgb(200,200,200);
+}
+
+#song-list {
+    height: 505.6px;
+    list-style: none; /* 去除默认的列表样式 */
+}
+
+.playlist {
+    display: flex; /* 将列表项设置为弹性盒子，实现横向布局 */
+    align-items: center; /* 垂直居中对齐 */
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.playlist:hover{
+    background-color: rgb(158, 110, 107);
+}
+
+.playlist-img-div {
+    margin-right: 10px; /* 图片容器右侧间距 */
+}
+
+.playlist-img {
+    border-radius: 10px;
+    width: 50px; /* 图片宽度 */
+    height: 50px; /* 图片高度 */
+}
+
+.playlist-song-msg {
+    flex: 1; /* 占据剩余空间 */
+}
+
+.play-song-name {
+    color: white;
+    font-weight: bold; /* 歌曲名称加粗 */
+    font-size: 16px;
+}
+
+.playlist-song-author {
+    color: white; /* 歌手信息颜色 */
+    font-size: 14px;
+}
+
+/* 在需要滚动的方向上设置 ul 的固定尺寸 */
+#song-list-div {
+    overflow-y: auto; /* 垂直方向滚动条 */
+}
+
+/* 修改滚动条的宽度、颜色和背景 */
+#song-list-div::-webkit-scrollbar {
+    width: 5px; /* 滚动条宽度 */
+    background-color:rgb(138, 90, 87); /* 滚动条背景色 */
+}
+
+/* 修改滚动条滑块的外观 */
+#song-list-div::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滑块颜色 */
+    border-radius: 2px; /* 滑块边界半径 */
+}
+
+/* 修改滚动条轨道的外观 */
+#song-list-div::-webkit-scrollbar-track {
+    background-color: rgb(138, 90, 87); /* 轨道背景色 */
+    border-radius: 2px; /* 轨道边界半径 */
+}
+
+/*---------------------------------------------------------*/
+/*歌词*/
+#song-lyrics-div{
+    display: none;
+    height: 745.6px;
+    width: 620px;
+    margin-left: 20px;
+}
+
+#lyrics-list {
+    list-style: none;
+    padding: 0;
+}
+
+.song-lyrics-li {
+    background-color:rgb(138, 90, 87); /* 滚动条背景色 */
+}
+
+.song-lyrics {
+    border-radius: 15px;
+    width: 500px;
+    display: inline-block;
+    font-size: 27px;
+    /*font-family: STFangsong;*/
+    font-family: KaiTi_GB2312  ;/*字体*/
+    background-color:rgb(138, 90, 87);
+    padding: 20px;
+    color: rgb(210, 210, 210);
+    letter-spacing: 2px; /* 调整字间距 */
+    cursor: pointer;
+}
+
+.song-lyrics:hover{
+    background-color:rgb(158, 110, 107);
+}
+
+
+
+/* 在需要滚动的方向上设置 ul 的固定尺寸 */
+#song-lyrics-div {
+    overflow-y: auto; /* 垂直方向滚动条 */
+}
+
+/* 修改滚动条的宽度、颜色和背景 */
+#song-lyrics-div::-webkit-scrollbar {
+    width: 5px; /* 滚动条宽度 */
+    background-color:rgb(138, 90, 87); /* 滚动条背景色 */
+}
+
+/* 修改滚动条滑块的外观 */
+#song-lyrics-div::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滑块颜色 */
+    border-radius: 2px; /* 滑块边界半径 */
+}
+
+/* 修改滚动条轨道的外观 */
+#song-lyrics-div::-webkit-scrollbar-track {
+    background-color: rgb(138, 90, 87); /* 轨道背景色 */
+    border-radius: 2px; /* 轨道边界半径 */
+}
+

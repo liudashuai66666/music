@@ -1,0 +1,601 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;  /* 设置字体为Arial或sans-serif字体族 */
+    margin: 0;                      /* 清除外边距 */
+    padding: 0;                     /* 清除内边距 */
+}
+
+/* 头部样式 */
+.header {
+    display: flex;                  /* 使用弹性布局 */
+    align-items: center;            /* 垂直居中对齐 */
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    color: #fff;                    /* 设置文字颜色为白色 */
+    /*padding: 10px;*/                  /* 上下左右各10像素的内边距 */
+    justify-content: center;        /* 元素居中对齐 */
+}
+
+.header h2 {
+    padding-right: 5px;             /* 右侧添加5像素的内边距 */
+    margin-top: 10px;
+    margin-bottom: -3px;
+}
+
+#logo a{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFFFFF;
+}
+
+/* 导航样式 */
+.nuv1 {
+    display: flex;                  /* 使用弹性布局 */
+    list-style-type: none;          /* 清除列表样式 */
+    padding: 0;                     /* 清除内边距 */
+    margin: 0;                      /* 清除外边距 */
+}
+
+.nuv1 li {
+    margin-top: 15px;
+    margin-bottom: 24.2px;
+    justify-content: center;
+}
+
+.nuv1 li:last-child {
+    margin-right: 0;                /* 最后一个菜单项去除右侧外边距 */
+}
+
+.nuv1 a{
+    padding-top: 16px;
+    padding-bottom: 23px;
+}
+
+.nuv1 a:hover{
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: rgb(0,0,0);
+    /* 背景颜色变为#7799d4（浅蓝色） */
+}
+
+a{
+    text-decoration: none;          /* 去除链接下划线 */
+    /*float: left;*/                  /* 左浮动 */
+}
+
+.nuv1 a{
+    padding-left: 17px;
+    padding-right: 17px;
+    color: #FFFFFF;
+}
+
+/* 主内容样式 */
+
+/* 页脚样式 */
+footer {
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    padding: 10px;                  /* 上下左右各10像素的内边距 */
+    text-align: center;             /* 文字居中对齐 */
+}
+
+#SearchInput{
+    background-color: rgba(225,225,225,1);
+    /*透明度*/
+    border-radius: 15px;
+    /*圆角边框*/
+    width: 200px;
+    height: 30px;
+    /* 输入框和按钮的宽高 */
+    border: none;
+    /* 去除边框 */
+    outline: none;
+    /* 去除选中时的边框样式 */
+    padding-left: 30px;
+    /* 左内边距 */
+    box-sizing: border-box;
+    /* 盒模型为border-box */
+    font-size: 15px;
+    /* 字体大小 */
+    color: #333333;
+    /* 文字颜色为#333333（深灰色） */
+    margin-bottom: 0;
+    /* 底部外边距 */
+    margin-right: 15px;
+    margin-top: 13px;
+}
+
+.header img{
+    width: 30px;
+    height: 30px;
+    margin-top: 13px;
+    border-radius: 15px;
+}
+
+#logoImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 0;
+    margin-top: 9px;
+}
+
+.header div{
+    display: flex;
+}
+
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.nav li {
+    margin: 0 10px; /* 为每个导航项之间设置一定的间距 */
+    margin-top: -5px;
+}
+
+.nav a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 13px; /* 设置字体大小为 12 像素 */
+    border-radius: 15px;
+}
+
+.nav a:hover{
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: rgb(155, 9, 9);
+    /* 背景颜色变为#7799d4（浅蓝色） */
+}
+
+/*
+---------------------------------------
+*/
+/*main内容*/
+.label-img{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+.main{
+    display: block;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+main-head
+个人信息，关注，粉丝，头像，姓名等
+*/
+.main-head{
+    display: block;
+    padding-top: 0px;
+}
+
+.head-content{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+.playlist-msg{
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 水平居中对齐 */
+}
+.avatar{
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+}
+#avatar-img{
+    display: block;
+    width: 220px;
+    height: 220px;
+    border: 4px solid #fff;
+    background: #fff;
+}
+.playlist-name{
+    width: 400px;
+}
+#playlist-author-div{
+    display: flex;
+    width: 400px;
+    height: 30px;
+    align-items: center;
+}
+#playlist-time-div{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    color: rgb(91,91,91);
+}
+
+#playlist-author{
+    font-size: 14px;
+    padding-right: 5px;
+}
+#playlist-author:hover{
+    color: rgb(49, 194, 124);
+    cursor: pointer;
+}
+#playlist-time{
+    font-size: 14px;
+}
+#playlist-time-author{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: rgb(91,91,91);
+}
+#description-div{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: rgb(91,91,91);
+}
+#edit-playlist{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 30px;;
+}
+#edit-button-div{
+    width: 400px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+#edit-button{
+    margin-right: 20px;
+    color: rgb(49, 194, 124);
+}
+#edit-button:hover{
+    color: rgb(29, 174, 104);
+    cursor: pointer;
+}
+#delete-button{
+    color: rgb(255, 0, 0);
+}
+#delete-button:hover{
+    color: rgb(225,0,0);
+    cursor: pointer;
+}
+.label-class{
+    padding: 3px;
+    border-left: 1px solid rgb(211,211,211);  /* 设置按钮的左边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-bottom: 1px solid rgb(211,211,211);  /* 设置按钮的下边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-right: 1px solid rgb(211,211,211);  /* 设置按钮的右边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-top: 1px solid rgb(211,211,211);  /* 设置按钮的上边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    cursor: pointer;
+    margin-right: 10px;
+}
+#choose-label-text{
+    display: none;
+    padding: 3px;
+    background-color: rgb(49, 194, 124);
+    border-left: 1px solid rgb(211,211,211);  /* 设置按钮的左边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-bottom: 1px solid rgb(211,211,211);  /* 设置按钮的下边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-right: 1px solid rgb(211,211,211);  /* 设置按钮的右边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-top: 1px solid rgb(211,211,211);  /* 设置按钮的上边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
+#label{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+#choose-label-text:hover{
+    background-color: rgb(29, 174, 104);
+}
+
+#name{
+    padding-top: 8px;
+    font-family: KaiTi_GB2312  ;/*字体*/
+    margin: 0 auto;
+    font-size: 30px;
+    color: #333333;
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden; /* 隐藏溢出部分 */
+    text-overflow: ellipsis; /* 使用省略号表示被隐藏的部分 */
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.concern-fans{
+    height: 40px;
+    margin: 4px 15px 26px;
+    overflow: hidden;
+    font-size: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.concern-fans li{
+    height: 44px;
+    width: 28px;
+    padding: 0 25px;
+    display: block;
+}
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+评论
+*/
+.comments-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+/* 基本样式 */
+#main-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#comments-number {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+#song-comments-div {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#write-comments {
+    background-color: rgb(245, 245, 245);
+    width: 1190px;
+    height: 100px;
+    max-width: 1190px;
+    max-height: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#send-button {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+#comments-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.uname-div{
+    display: flex;
+}
+
+/*
+评论里面最难的界面
+comments-li
+*/
+.comments-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.uname {
+    font-weight: bold;
+}
+
+.send-time {
+    color: #888;
+    font-size: 12px;
+}
+
+.comments-content {
+    margin-top: 5px;
+    width: 1100px;
+}
+.lower-comments-content{
+    margin-top: 5px;
+    width: 1000px;
+}
+
+.dianzhan-div {
+    margin-top: 10px;
+}
+
+.fa-regular.fa-thumbs-up {
+    color: #888;
+    margin-right: 5px;
+}
+
+.one-huifu-button,.two-huifu-button {
+    color: #888;
+    cursor: pointer;
+}
+.one-huifu-button:hover,.two-huifu-button:hover {
+    color: #31c27c;
+    cursor: pointer;
+}
+
+.reply-button {
+    color: #888;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.fa-solid.fa-angle-down {
+    margin-left: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+#comments-list{
+    padding: 0;
+    margin: 0;
+}
+.lower-comments-list {
+    width: 1100px;
+    margin-left: 60px;
+    padding-left: 10px;
+    background-color: rgb(245,245,245);
+    display: none;
+}
+.comments-list-li {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+.yiji-comments{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.img{
+    width: 80px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.lower-comments-list-li{
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(235,235,235);
+}
+
+/*
+
+*/
+
+.one-write-comments-div {
+    display: none;
+    flex-direction: column;
+}
+
+.one-write-comments {
+    border: 1px solid #ccc;
+    padding: 8px;
+    transition: border-width 0.3s ease-in-out;
+    background-color: rgb(245, 245, 245);
+    width: 1072px;
+    height: 85px;
+    max-width: 1072px;
+    max-height: 85px;
+    resize: none;
+}
+
+.one-write-comments:focus {
+    outline: none;
+    border-width: 1px;
+}
+.one-buttons,.two-buttons{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-end;
+}
+.one-okButton,.one-noButton{
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.one-okButton:hover,.one-noButton:hover{
+    color: #31c27c;
+}
+
+.two-write-comments-div {
+    display: none;
+    flex-direction: column;
+}
+
+.two-write-comments {
+    border: 1px solid #ccc;
+    padding: 8px;
+    transition: border-width 0.3s ease-in-out;
+    background-color: rgb(245, 245, 245);
+    width: 980px;
+    height: 70px;
+    max-width: 980px;
+    max-height: 70px;
+    resize: none;
+}
+
+.two-write-comments:focus {
+    outline: none;
+    border-width: 1px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-end;
+}
+.two-okButton,.two-noButton{
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.two-okButton:hover,.two-noButton:hover{
+    color: #31c27c;
+}
+/* 鼠标悬停效果 */
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    color: #fff;                    /* 设置文字颜色为白色 */
+    padding: 10px;                  /* 上下左右各10像素的内边距 */
+    text-align: center;             /* 文字居中对齐 */
+}

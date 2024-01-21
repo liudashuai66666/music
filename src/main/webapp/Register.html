@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>注册页面</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="css/Register.css">
+
+        <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet">
+        <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" rel="stylesheet">
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+
+    </head>
+    <body>
+        <div class="container1">
+
+            <div class="header">
+                <h1 class="title">注册</h1><br>
+                <span id="uname_err" class="err_msg" style="display: none">该名字已被使用</span>
+            </div>
+
+            <div class="main">
+                <form action="/Ly/enrollServlet" id="enrollFrom" method="post">
+
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="unameInput" name="uname" placeholder="昵称" required><br>
+                        <span id="mailbox_err" class="err_msg" style="display: none">该邮箱已被使用</span>
+                    </span><br>
+
+                    <span>
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" name="mailbox" id="mailboxInput" placeholder="邮箱" pattern="^[1-9][0-9]{4,}@qq.com$" required title="请输入正确的邮箱格式"><br>
+                    </span><br>
+
+                    <span>
+                        <i class="fa fa-lock"></i>
+                        <input type="password" name="password" id="passwordInput" placeholder="密码" pattern="^(?!\d+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]{8,16}$" required title="请输入长度在8~12之间包含大小写字母和数字至少两种"><br>
+                    </span><br>
+
+                    <span>
+                        <i class="fa fa-eye"></i>
+                        <input id="Captcha" type="text" name="captcha" placeholder="验证码" required>
+                        <input id="sendCaptcha" type="button" class="button" value="发送"><br>
+                    </span><br>
+
+                    <div id="subDiv">
+                        <a href="Login.html">已有账号？点击登录</a>
+                        <br>
+                        <input type="submit" class="button" value="注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/Register.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

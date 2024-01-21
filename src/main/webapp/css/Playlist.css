@@ -26,6 +26,10 @@ body {
     padding-right: 5px;
 }
 
+#manage-div:hover{
+    cursor: not-allowed;
+    background-color: rgb(51, 51, 51);
+}
 /* 导航样式 */
 .nuv1 {
     display: flex;                  /* 使用弹性布局 */
@@ -158,6 +162,15 @@ footer {
     background-color: rgb(155, 9, 9);
     /* 背景颜色变为#7799d4（浅蓝色） */
 }
+#found-song-nav{
+    background-color: rgb(0,0,0);
+}
+
+#playlist-nav{
+    background-color: rgb(155, 9, 9);
+}
+
+
 
 /*
 ---------------------------------------
@@ -263,7 +276,9 @@ footer {
     z-index: 0; /* 使图片位于 .msk 下方 */
     width: 130px;
 }
-
+.recommend-cnt:hover img{
+    transform: scale(1.1);
+}
 .msk:hover {
     opacity: 0.8; /* 添加悬停效果 */
 }
@@ -303,15 +318,16 @@ p{
 风格隐藏标签
 */
 .song-style{
-    z-index: 999;
-    position: fixed;
-    background-color: white;
-    display: none;
-    border-radius: 3px;
-    border-left: 1px solid rgb(211,211,211); /* 左边界线样式 */
-    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
-    border-right: 1px solid rgb(211,211,211); /* 右边界线样式 */
-    border-top: 1px solid rgb(211,211,211); /* 右边界线样式 */
+    z-index: 999; /* 设置堆叠顺序为999，确定该元素的显示层级 */
+    position: fixed; /* 设置元素的定位方式为固定定位，相对于浏览器窗口进行定位 */
+    background-color: white; /* 设置元素的背景颜色为白色 */
+    display: none; /* 设置元素的显示方式为隐藏，即不显示在页面中 */
+    border-radius: 3px; /* 设置元素的圆角边框半径为3个像素 */
+    border-left: 1px solid rgb(211,211,211); /* 设置元素的左边界线样式为1个像素的实线，颜色为rgb(211,211,211) */
+    border-bottom: 1px solid rgb(211,211,211); /* 设置元素的下边界线样式为1个像素的实线，颜色为rgb(211,211,211) */
+    border-right: 1px solid rgb(211,211,211); /* 设置元素的右边界线样式为1个像素的实线，颜色为rgb(211,211,211) */
+    border-top: 1px solid rgb(211,211,211); /* 设置元素的上边界线样式为1个像素的实线，颜色为rgb(211,211,211) */
+    cursor: pointer;
 }
 
 

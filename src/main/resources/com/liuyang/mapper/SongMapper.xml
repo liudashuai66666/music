@@ -3,12 +3,112 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liuyang.mapper.SongMapper">
+    <insert id="addSong">
+        insert into `song` (href,name,author,lyrics,img,cnt,createTime,time) values(#{href},#{name},#{author},#{lyrics},#{img},#{cnt},#{createTime},#{time});
+    </insert>
+    <insert id="addSinger">
+        insert into manage_application (uname,state,song_id,time) values(#{name},"待审核",#{id},#{time});
+    </insert>
+    <insert id="addSong1">
+        insert into `song` (href,name,author,lyrics,img,cnt,createTime,time,state) values(#{href},#{name},#{author},#{lyrics},#{img},#{cnt},#{createTime},#{time},"歌手申请");
+    </insert>
+    <update id="addCnt">
+        UPDATE  song set cnt = cnt+1  WHERE id = #{id};
+    </update>
+    <update id="updateSongState_no">
+        UPDATE  song set state = "审核未通过"  WHERE id = #{id};
+    </update>
+    <update id="updateSongState_yes">
+        UPDATE  song set state = "已发布"  WHERE id = #{id};
+    </update>
+    <update id="updateUserStatus">
+        UPDATE  `user` set status = "SINGER"  WHERE username = #{name};
+    </update>
 
+    <delete id="singerButton_no">
+        DELETE FROM `manage_application` WHERE song_id = #{id};
+    </delete>
+    <delete id="deleteSongById">
+        DELETE FROM `song` WHERE id = #{id};
+    </delete>
 
     <select id="selectALL" resultType="com.liuyang.pojo.Song">
         select * from song;
     </select>
     <select id="selectLike" resultType="com.liuyang.pojo.Song">
-        SELECT * FROM song WHERE id IN (SELECT song_id FROM `like` WHERE uname = #{uname}) LIMIT 10;
+        SELECT * FROM song WHERE id IN (SELECT song_id FROM `like` WHERE mailbox = #{mailbox});
     </select>
+    <select id="selectByPlaylist" resultType="com.liuyang.pojo.Song">
+        select * from song where id IN (select song_id from song_playlist_relationship where list_id = #{id});
+    </select>
+    <select id="select_rankingTime" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM song where state = "已发布" ORDER BY createTime DESC LIMIT 20;
+    </select>
+    <select id="selectById" resultType="com.liuyang.pojo.Song">
+        select * from song where id = #{id};
+    </select>
+    <select id="select_hotRanking" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM song where state = "已发布" ORDER BY cnt DESC LIMIT 20;
+    </select>
+    <select id="selectSongName" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM song WHERE state = "已发布" and (name LIKE CONCAT('%', #{name}, '%') OR author LIKE CONCAT('%', #{name}, '%') OR album LIKE CONCAT('%', #{name}, '%'));
+    </select>
+    <select id="selectMySong" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM song WHERE author = #{name}
+    </select>
+    <select id="selectNewSong" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM `song` ORDER BY id DESC LIMIT 1;
+    </select>
+    <select id="selectSingerSong" resultType="com.liuyang.pojo.Song">
+        SELECT * FROM song WHERE author = #{name} and state = "已发布";
+    </select>
+    <select id="selectNewSongs" resultType="com.liuyang.pojo.Song">
+        select * from song where state = "待审核" limit 6 offset #{cnt};
+    </select>
+    <select id="selectSongNumber" resultType="java.lang.Integer">
+        select count(*) from `song` where state = "待审核";
+    </select>
+    <select id="selectSingerNumber" resultType="java.lang.Integer">
+        select count(*) from manage_application where state = "待审核";
+    </select>
+    <select id="selectNewSinger" resultType="com.liuyang.pojo.Song">
+        select * from `song` where id IN(select song_id from manage_application )limit 5 offset #{cnt} ;
+    </select>
+    <select id="selectNewSingerUser" resultType="com.liuyang.pojo.User">
+        SELECT u.*
+        FROM `user` u
+        JOIN manage_application ma ON u.username = ma.uname
+        ORDER BY u.username ASC
+        LIMIT 5 OFFSET #{cnt};
+    </select>
+
+
+    <!--<select id="selectAllSinger" resultType="com.liuyang.pojo.Singer">
+        SELECT manage_application.*, song.*, user.*FROM manage_application JOIN song ON manage_application.song_id = song.id JOIN user ON  manage_application.uname = user.username limit 0 offset #{cnt};
+    </select>-->
+
+
+    <!--<resultMap id="singerResult" type="com.liuyang.pojo.Singer">
+        <id property="id" column="id" />
+        <result property="uname" column="uname" />
+        <result property="song_id" column="song_id" />
+        <result property="state" column="state" />
+        <result property="time" column="time" />
+        &lt;!&ndash; Add more properties as needed &ndash;&gt;
+
+        <association property="user" javaType="com.liuyang.pojo.User">
+            <id property="username" column="uname" />
+            &lt;!&ndash; Add more properties as needed &ndash;&gt;
+        </association>
+
+        <association property="song" javaType="com.liuyang.pojo.Song">
+            <id property="id" column="song_id" />
+            &lt;!&ndash; Add more properties as needed &ndash;&gt;
+        </association>
+    </resultMap>
+    <select id="selectAllSinger" resultMap="singerResult">
+        SELECT manage_application.*, song.*, user.*FROM manage_application JOIN song ON manage_application.song_id = song.id JOIN user ON  manage_application.uname = user.username limit 0 offset #{cnt};
+    </select>-->
+
+
 </mapper>

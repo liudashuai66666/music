@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+
+        <!--弹窗-->
+
+        <link rel="stylesheet" href="css/community.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nav1" id="nav1">
+                        <li><a href="Hall.html" class="nac-choose" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="MySong.html" class="nac-choose" id="MySong-nav">我的音乐</a></li>
+                        <li><a href="#" class="nac-choose" id="community-nav">社区</a></li>
+                        <li><a href="#" class="nac-choose">音乐人</a></li>
+                        <li><a class="nac-choose" id="manage-div">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+                <div id="my-msg-control">
+                    <ul id="msg-control-ul">
+                        <li class="msg-control-li" id="change-msg-button">修改资料</li>
+                        <li class="msg-control-li" id="Back-off-login">退出登录</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="main">
+            <div id="title">
+                <p>动态</p>
+                <span id="send-dynamics-button">发动态</span>
+            </div>
+            <div id="dynamics-list">
+                <div class="dynamic-list-li">
+                    <div class="user_data">
+                        <div class="avatar-div">
+                            <img src="img/avatar/avatar1.jpg" class="user_avatar">
+                            <a href="#" class="avatar-a"></a>
+                        </div>
+                        <div class="name_and_time">
+                            <span class="user_name">刘大帅</span>
+                            <span class="send_time">2023-08-09 22:18:30</span>
+                        </div>
+                    </div>
+                    <span class="dynamic-text">你好啊，傻大个</span>
+                    <div class="dynamic-song">
+                        <img src="img/avatar/avatar1.jpg" class="song-img">
+                        <div class="song-data">
+                            <span class="song-name">江南</span>
+                            <span class="song-author">林俊杰</span>
+                        </div>
+                    </div>
+                   <div class="dynamic-img">
+                       <img src="img/avatar/avatar1.jpg" class="photo">
+                       <img src="img/avatar/avatar1.jpg" class="photo">
+                       <img src="img/avatar/avatar1.jpg" class="photo">
+                       <img src="img/avatar/avatar1.jpg" class="photo">
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div id="change-my-msg">
+            <div id="change-div">
+                <div id="change-msg">
+                    <p1>个人设置</p1>
+                    <span>昵称</span>
+                    <input type="text" id="change-name">
+                    <span>介绍</span>
+                    <textarea id="signature"></textarea>
+                    <button id="no-button">取消</button>
+                </div>
+                <div id="change-img-div">
+                    <img src="img/avatar/avatar1.jpg" id="change-img">
+                    <button id="ok-button">保存</button>
+                </div>
+            </div>
+        </div>
+        <div id="floating-window">
+            <div id="window-content">
+                <span>分享</span>
+                <div id="text-div">
+                    <textarea id="text"></textarea>
+                    <div id="text-button">
+                        <button id="img-button">
+                            <i class="fa-regular fa-image"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="choose-song">
+                    <img src="img/newPlaylist.png">
+                    <p>给动态配上音乐</p>
+                </div>
+                <div id="choose-img-list">
+
+                </div>
+                <div id="send-button">
+                    <button id="send">分享</button>
+                    <button id="close">取消</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+        <script src="js/community.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

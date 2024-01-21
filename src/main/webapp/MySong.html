@@ -22,11 +22,11 @@
                 </h2>
                 <nav>
                     <ul class="nuv1">
-                        <li><a href="hall.html">发现音乐</a></li>
-                        <li><a href="#">我的音乐</a></li>
-                        <li><a href="#">朋友</a></li>
+                        <li><a href="Hall.html" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="#" id="MySong-nav">我的音乐</a></li>
+                        <li><a href="community.html">社区</a></li>
                         <li><a href="#">音乐人</a></li>
-                        <li><a href="#">下载客户端</a></li>
+                        <li><a id="manage-div">管理</a></li>
                     </ul>
                 </nav>
                 <span>
@@ -34,7 +34,7 @@
                     <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
                 </span><br>
                 <span>
-                    <img src="img/flag.png" class="my-avatar">
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
                 </span>
             </div>
         </header>
@@ -52,271 +52,245 @@
                     <ul class="concern-fans">
                         <li class="my-concern">
                             <a href="#" id="concern-a" class="concern-fans-a">
-                                <strong class="quantity concern-quantity">4</strong>
+                                <strong class="quantity concern-quantity" id="concern">4</strong>
                                 <span class="flag concern-flag">关注</span>
                             </a>
                         </li>
                         <li class="my-fans">
                             <a href="#" id="fans-a" class="concern-fans-a">
-                                <strong class="quantity fans-quantity">102938</strong>
+                                <strong class="quantity fans-quantity" id="fans">102938</strong>
                                 <span class="flag fans-flag">粉丝</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="main-body">
+            <div class="main-body" id="main-body">
                 <div class="choose1">
-                    <a href="#" class="choose1-class">我喜欢</a>
-                    <a href="#" class="choose1-class">我创建的歌单</a>
-                    <a href="#" class="choose1-class">关注</a>
-                    <a href="#" class="choose1-class">粉丝</a>
-                </div>
-                <div class="choose2">
-                    <a href="#" class="choose2-class">歌曲 90</a>
-                    <a href="#" class="choose2-class">歌单</a>
-                </div>
-                <div class="song-list-div">
-                    <div class="list-button">
-                        <a class="button play-song">播放全部</a>
-                        <a class="button">添加到</a>
-                        <a class="button">下载</a>
-                        <a class="button">批量管理</a>
+                    <a class="choose1-class" id="MyLike-nav" href="MySong.html">我喜欢</a>
+                    <a class="choose1-class" id="My-create-playlist">我创建的歌单</a>
+                    <a class="choose1-class" id="My-concern-button">关注</a>
+                    <a class="choose1-class" id="My-fans-button">粉丝</a>
+                    <div id="concern-div">
+                        <span id="concern-button">上传歌曲</span>
                     </div>
-                    <ul class="song-title">
-                        <li class="song-name-title">歌曲</li>
-                        <li class="song-author-title">歌手</li>
-                        <li class="song-album-title">专辑</li>
-                        <li class="song-time-title">时长</li>
-                    </ul>
-                    <ul class="song-list" id="song-list">
-                        <li class="song" title="haha">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
+                    <div id="singer-div">
+                        <span id="singer-button">成为歌手</span>
+                    </div>
+                </div>
+                </div>
+                <div id="concern-main">
+                    <ul class="concern-list" id="concern-list">
+                        <li class="concern-list-li">
+                            <div class="concern-cnt">
+                                <img src="img/playlist/song9.jpg" class="concern-user-img">
+                                <a href="#" title="假如能回到过去，你想做什么"
+                                   class="img-msk"></a>
                             </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
-                        </li>
-                        <li class="song">
-                            <div class="song-ing-div">
-                                <img src="img/song/别怕变老.webp" class="song-img">
-                            </div>
-                            <div class="song-name-div">
-                                <a  class="song-name">别怕变老</a>
-                            </div>
-                            <div class="song-author-div">
-                                <a  class="song-author">艾热AIR /王以太</a>
-                            </div>
-                            <div class="song-album-div">
-                                <a  class="song-album">中国说唱巅峰对决 第3期</a>
-                            </div>
-                            <div class="song-time-div">
-                                <a class="song-time">04:18</a>
-                            </div>
+                            <p class="dec">
+                                <a title="假如能回到过去，你想做什么" class="concern-user-name"
+                                   href="#">宁舒意</a>
+                            </p>
                         </li>
                     </ul>
+                </div>
+                <div id="content">
+                    <div class="choose2">
+                        <a class="choose2-class" id="song_number">歌曲 90</a>
+                        <a class="choose2-class" id="playlist_number">歌单</a>
+                        <a class="choose2-class" id="MySong">我上传的歌曲</a>
+                    </div>
+                    <div id="song-list-div">
+                        <div class="list-button">
+                            <a class="button play-song" id="play-all-song">播放全部</a>
+                            <a class="button">添加到</a>
+                            <a class="button">下载</a>
+                            <a class="button">批量管理</a>
+                        </div>
+                        <ul class="song-title">
+                            <li class="song-name-title">歌曲</li>
+                            <li class="song-author-title">歌手</li>
+                            <li class="song-album-title" id="song-album-title">专辑</li>
+                            <li class="song-time-title">时长</li>
+                        </ul>
+                        <ul class="song-list" id="song-list">
+                            <li class="song" title="1">
+                                <div class="song-ing-div">
+                                    <img src="img/song/别怕变老.webp" class="song-img">
+                                </div>
+                                <div class="song-name-div">
+                                    <a  class="song-name">别怕变老</a>
+                                </div>
+                                <div class="song-author-div">
+                                    <a  class="song-author">艾热AIR /王以太</a>
+                                </div>
+                                <div class="song-album-div">
+                                    <a  class="song-album">中国说唱巅峰对决 第3期</a>
+                                </div>
+                                <div class="song-time-div">
+                                    <a class="song-time">04:18</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--我喜欢的歌曲列表-->
+                        <ul class="song-list" id="mySong-list">
+                            <li class="song" title="1">
+                                <div class="song-ing-div">
+                                    <img src="img/song/别怕变老.webp" class="song-img">
+                                </div>
+                                <div class="song-name-div">
+                                    <a  class="song-name">别怕变老</a>
+                                </div>
+                                <div class="song-author-div">
+                                    <a  class="song-author">艾热AIR /王以太</a>
+                                </div>
+                                <div class="song-album-div">
+                                    <a  class="song-album">中国说唱巅峰对决 第3期</a>
+                                </div>
+                                <div class="song-time-div">
+                                    <a class="song-time">04:18</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--我上传的歌曲列表-->
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        <footer>
-            <div class="footer_list">
-                <div class="list_head">
-                    <img src="img/song/一路之下.webp" class="head-song-img" id="head-song-img">
-                    <div class="head-song-msk">
-                        <span class="head-song-name" id="head-song-name">一路之下</span>
-                        <span class="head-song-author" id="head-song-author">张杰</span>
-                    </div>
-
+        <div id="create-playlist-div">
+            <div id="create-playlist">
+                <span id="title">创建新歌单</span>
+                <div id="create-playlist-img">
+                    <img src="img/newPlaylist.png" id="playlist-img">
                 </div>
-                <div class="list-body">
-                    <div class="list-body-content">
-                        <div class="body-content-button">
-                            <div class="content-button back-button" id="back-button">
-                                <i class="fa fa-backward-step" ></i>
-                            </div>
-                            <div class="content-button play-button" id="play-button">
-                                <i class="fa fa-play" id="i-play"></i>
-                            </div>
-                            <div class="content-button next-button" id="next-button">
-                                <i class="fa fa-forward-step"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-body-progress"><!--进度条-->
-                        <span class="used-time" id="used-time">00:00</span>
-                        <div class="progress">
-                            <input class="range" id="range" type="range" min="0" max="226" step="0.01" autocapitalize="off" >
-                        </div>
-                        <span class="used-time" id="remaining-time">00:00</span>
-                    </div>
+                <div id="create-playlist-name">
+                    <!--<span>歌单名</span>-->
+                    <input type="text" name="歌单名" placeholder="歌单名" id="playlist-name">
+                    <input type="text" name="歌单简介" placeholder="歌单简介" id="playlist-description">
                 </div>
-                <div class="list-tail">
-                    <div class="list-tail-button">
-                        <div class="tail-button-kongbai"></div>
-                        <div class="component">
-                            <i class="fa fa-volume-up" id="volume"></i>
-                            <input type="range" class="volume" id="volume-range">
-                        </div>
-                    </div>
+                <div id="buttons">
+                    <button id="no-button">取消</button>
+                    <button id="ok-button">确定</button>
                 </div>
             </div>
-            <audio class="audio-element" id="audio-element" style="display: none"></audio>
+        </div>
+        <div id="playlist-list">
+            <div id="My-playlist">
+
+            </div>
+        </div>
+        <ul id="recommend-list-collection">
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+        </ul>
+
+        <div id="create-song-div">
+            <div id="create-song">
+                <span id="title-song">上传歌曲</span>
+                <div id="create-song-img">
+                    <img src="img/newPlaylist.png" id="song-img">
+                </div>
+                <div id="create-song-name">
+                    <input type="text" name="歌曲名" placeholder="歌曲名" id="song-name">
+                    <div class="song-button">
+                        <input type="text" name="歌曲文件" placeholder="歌曲文件" id="song-mp3">
+                        <button id="song-mp3-button">上传</button>
+                    </div>
+                    <div class="song-button">
+                        <input type="text" name="歌词文件" placeholder="歌词文件" id="song-lyrics">
+                        <button id="song-lyrics-button">上传</button>
+                    </div>
+                </div>
+                <div id="buttons-song">
+                    <button id="no-button-song">取消</button>
+                    <button id="ok-button-song">确定</button>
+                </div>
+            </div>
+        </div>
+        <div id="become-singer-div">
+            <div id="become-singer-song">
+                <span id="title-singer-song">成为歌手</span>
+                <div id="become-singer-song-img">
+                    <img src="img/newPlaylist.png" id="singer-song-img">
+                </div>
+                <div id="become-singer-song-name">
+                    <input type="text" name="歌曲名" placeholder="歌曲名" id="singer-song-name">
+                    <div class="song-button">
+                        <input type="text" name="歌曲文件" placeholder="歌曲文件" id="singer-song-mp3">
+                        <button id="singer-mp3-button">上传</button>
+                    </div>
+                    <div class="song-button">
+                        <input type="text" name="歌词文件" placeholder="歌词文件" id="singer-song-lyrics">
+                        <button id="singer-lyrics-button">上传</button>
+                    </div>
+                </div>
+                <div id="buttons-singer">
+                    <button id="no-button-singer-song">取消</button>
+                    <button id="ok-button-singer-song">确定</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
         </footer>
-        <!--自定义audio样式-->
+
 
         <link rel="stylesheet" href="css/MySong.css">
-        <link rel="stylesheet" href="css/audio.css">
         <!--控制样式-->
 
-        <script src="js/audio.js"></script>
+
         <script src="js/MySong.js"></script>
         <script src="js/cookie.js"></script>
         <script src="js/Interceptor.js"></script>

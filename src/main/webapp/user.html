@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!--axios-->
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+        <!--图标库-->
+
+
+        <!--js文件-->
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nuv1">
+                        <li><a href="Hall.html" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="MySong.html" id="MySong-nav">我的音乐</a></li>
+                        <li><a href="community.html">社区</a></li>
+                        <li><a href="#">音乐人</a></li>
+                        <li><a href="#" id="manage-div">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+            </div>
+        </header>
+
+
+        <div class="main">
+            <div class="main-head">
+                <div class="head-content">
+                    <div class="avatar">
+                        <img src="img/avatar/avatar1.jpg" class="avatar-img">
+                    </div>
+                    <div class="my-name">
+                        <p class="name">Ly</p>
+                        <i class="fa fa-user" style="color: #31c27c;" id="singer-flag" title="歌手"></i>
+                    </div>
+                    <ul class="concern-fans">
+                        <li class="my-concern">
+                            <a href="#" id="concern-a" class="concern-fans-a">
+                                <strong class="quantity concern-quantity" id="concern">4</strong>
+                                <span class="flag concern-flag">关注</span>
+                            </a>
+                        </li>
+                        <li class="my-fans">
+                            <a href="#" id="fans-a" class="concern-fans-a">
+                                <strong class="quantity fans-quantity" id="fans">102938</strong>
+                                <span class="flag fans-flag">粉丝</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-body" id="main-body">
+                <div class="choose1">
+                    <a class="choose1-class" id="MyLike-nav">我喜欢</a>
+                    <a class="choose1-class" id="My-create-playlist">我创建的歌单</a>
+                    <div id="concern-div">
+                        <i class="fa-solid fa-plus" id="concern-flag"></i>
+                        <span id="concern-button">关注</span>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="choose2">
+                        <a class="choose2-class" id="song_number">歌曲 90</a>
+                        <a class="choose2-class" id="playlist_number">歌单</a>
+                        <a class="choose2-class" id="MySong">我上传的歌曲</a>
+                    </div>
+                    <div id="song-list-div">
+                        <div class="list-button">
+                            <a class="button play-song" id="play-all-song">播放全部</a>
+                            <a class="button">添加到</a>
+                            <a class="button">下载</a>
+                            <a class="button">批量管理</a>
+                        </div>
+                        <ul class="song-title">
+                            <li class="song-name-title">歌曲</li>
+                            <li class="song-author-title">歌手</li>
+                            <li class="song-album-title">专辑</li>
+                            <li class="song-time-title">时长</li>
+                        </ul>
+                        <ul class="song-list" id="song-list">
+                            <li class="song" title="1">
+                                <div class="song-ing-div">
+                                    <img src="img/song/别怕变老.webp" class="song-img">
+                                </div>
+                                <div class="song-name-div">
+                                    <a class="song-name">别怕变老</a>
+                                </div>
+                                <div class="song-author-div">
+                                    <a class="song-author">艾热AIR /王以太</a>
+                                </div>
+                                <div class="song-album-div">
+                                    <a class="song-album">中国说唱巅峰对决 第3期</a>
+                                </div>
+                                <div class="song-time-div">
+                                    <a class="song-time">04:18</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="song-list" id="mySong-list">
+                            <li class="song" title="1">
+                                <div class="song-ing-div">
+                                    <img src="img/song/别怕变老.webp" class="song-img">
+                                </div>
+                                <div class="song-name-div">
+                                    <a class="song-name">别怕变老</a>
+                                </div>
+                                <div class="song-author-div">
+                                    <a class="song-author">艾热AIR /王以太</a>
+                                </div>
+                                <div class="song-album-div">
+                                    <a class="song-album">中国说唱巅峰对决 第3期</a>
+                                </div>
+                                <div class="song-time-div">
+                                    <a class="song-time">04:18</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="create-playlist-div">
+            <div id="create-playlist">
+                <span id="title">创建新歌单</span>
+                <div id="create-playlist-img">
+                    <img src="img/newPlaylist.png" id="playlist-img">
+                </div>
+                <div id="create-playlist-name">
+                    <!--<span>歌单名</span>-->
+                    <input type="text" name="歌单名" placeholder="歌单名" id="playlist-name">
+                    <input type="text" name="歌单简介" placeholder="歌单简介" id="playlist-description">
+                </div>
+                <div id="buttons">
+                    <button id="no-button">取消</button>
+                    <button id="ok-button">确定</button>
+                </div>
+            </div>
+        </div>
+        <div id="playlist-list">
+            <span id="MyLike" class="playlist-Options">我喜欢</span>
+            <div id="My-playlist">
+
+            </div>
+        </div>
+        <ul id="recommend-list-collection">
+            <li class="recommend-list-li">
+                <div class="recommend-cnt">
+                    <img src="img/playlist/好看.png" class="playlist-img">
+                    <a href="PlaylistSong.html?id=16" class="img-msk" title="1"></a>
+                </div>
+                <p class="dec">
+                    <a title="1" class="dec-msk" href="#">1</a>
+                </p>
+            </li>
+        </ul>
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+
+
+        <link rel="stylesheet" href="css/user.css">
+        <!--控制样式-->
+
+
+        <script src="js/user.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

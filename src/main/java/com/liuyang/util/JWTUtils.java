@@ -5,7 +5,7 @@ import io.jsonwebtoken.*;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import javax.servlet.http.HttpServletResponse;
+
 
 
 public class JWTUtils {
@@ -18,7 +18,7 @@ public class JWTUtils {
                 .signWith(SignatureAlgorithm.HS256,key) //签发算法，密钥为key
                 .addClaims(claims)  //body数据，要唯一，自行设置
                 .setIssuedAt(new Date())    //设置签发时间
-                .setExpiration(new Date(System.currentTimeMillis()+30*60*1000));  //有效时间，这个是半个小时
+                .setExpiration(new Date(System.currentTimeMillis()+5*1000));  //有效时间，这个是半个小时
         String token=jwtBuilder.compact();
         return token;//返回创建好的token
     }

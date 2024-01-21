@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!--axios-->
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+        <!--图标库-->
+
+
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nuv1">
+                        <li><a href="Hall.html">发现音乐</a></li>
+                        <li><a href="MySong.html">我的音乐</a></li>
+                        <li><a href="community.html">社区</a></li>
+                        <li><a href="#">音乐人</a></li>
+                        <li><a href="#">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+            </div>
+        </header>
+
+
+        <div class="main">
+            <div class="main-head">
+                <div class="head-content">
+                    <div class="avatar">
+                        <img src="img/avatar/avatar1.jpg" class="avatar-img" id="avatar-img">
+                    </div>
+                    <div class="playlist-msg">
+                        <div class="playlist-name">
+                            <p class="name" id="name">周杰伦</p>
+                        </div>
+                        <div id="description-div">
+                            <span id="description">大家好，我是周杰伦</span>
+                        </div>
+                        <span id="cnt">歌曲：100</span>
+                        <div id="buttons">
+                            <div id="play-div">
+                                <i class="fa-solid fa-play"></i>
+                                <span id="play-button">播放全部</span>
+                            </div>
+                            <div id="concern-div">
+                                <i class="fa-solid fa-plus" id="concern-flag"></i>
+                                <span id="concern-button">关注</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-body">
+                <div class="song-list-div">
+                    <ul class="song-title">
+                        <li class="song-name-title">歌曲</li>
+                        <li class="song-author-title">歌手</li>
+                        <li class="song-album-title">专辑</li>
+                        <li class="song-time-title">时长</li>
+                    </ul>
+                    <ul class="song-list" id="song-list">
+                        <li class="song-list-li" title="haha">
+                            <div class="song-ing-div">
+                                <img src="img/song/别怕变老.webp" class="song-img">
+                            </div>
+                            <div class="song-name-div">
+                                <a class="song-name">别怕变老</a>
+                            </div>
+                            <div class="song-author-div">
+                                <a class="song-author">艾热AIR /王以太</a>
+                            </div>
+                            <div class="song-album-div">
+                                <a class="song-album">中国说唱巅峰对决 第3期</a>
+                            </div>
+                            <div class="song-time-div">
+                                <a class="song-time">04:18</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+
+        <link rel="stylesheet" href="css/SingerHall.css">
+        <!--控制样式-->
+
+        <script src="js/SingerHall.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

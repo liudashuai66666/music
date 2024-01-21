@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+
+        <!--弹窗-->
+
+        <link rel="stylesheet" href="css/Ranking.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nav1" id="nav1">
+                        <li><a href="#" class="nac-choose" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="MySong.html" class="nac-choose" id="MySong-nav">我的音乐</a></li>
+                        <li><a href="community.html" class="nac-choose">社区</a></li>
+                        <li><a href="#" class="nac-choose">音乐人</a></li>
+                        <li><a href="#" class="nac-choose" id="manage-div">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+                <div id="my-msg-control">
+                    <ul id="msg-control-ul">
+                        <li class="msg-control-li" id="change-msg-button">修改资料</li>
+                        <li class="msg-control-li" id="Back-off-login">退出登录</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div id="g_nav2">
+            <div class="choices">
+                <ul class="nav">
+                    <li><a href="Hall.html" id="recommend-nav">推荐</a></li>
+                    <li><a href="#" id="ranking-nav" itemid="ranking-nav">排行榜</a></li>
+                    <li><a href="Playlist.html" id="playlist-nav">歌单</a></li>
+                    <li><a href="#">主播电台</a></li>
+                    <li><a href="Singer.html">歌手</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="ranking-class">
+                <p1>排行榜</p1>
+                <ul id="ranking-class-list">
+                    <li class="ranking-class" id="new-song-ranking" onclick="timeRanking()">
+                        <img src="img/新歌榜.jpg">
+                        <span>新歌榜</span>
+                    </li>
+                    <li class="ranking-class" id="hot-song-ranking" onclick="hotRanking(this)">
+                        <img src="img/热歌榜.jpg">
+                        <span>热歌榜</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="ranking-list-div">
+                <div id="ranking-msg-img-div">
+                    <div id="ranking-img-div">
+                        <img src="img/新歌榜.jpg" id="ranking-img">
+                    </div>
+                    <div id="ranking-msg-div">
+                        <div id="ranking-msg">
+                            <span id="ranking-name">新歌榜</span>
+                        </div>
+                        <!--<div id="ranking-button">
+                            <span id="play-All-button">播放</span>
+                            <span id="comments-button">评论</span>
+                        </div>-->
+                    </div>
+                </div>
+                <div id="ranking-song-list">
+                    <div id="ranking-song-title">
+                        <span>歌曲列表</span>
+                        <span id="song-number">20首歌</span>
+                    </div>
+                    <ul class="song-title">
+                        <li class="song-name-title">歌曲</li>
+                        <li class="song-author-title">歌手</li>
+                        <li class="song-time-title">时长</li>
+                    </ul>
+                    <ul class="song-list" id="song-list">
+                        <li class="song" title="haha">
+                            <div class="ranking">
+                                1
+                            </div>
+                            <div class="song-img-div">
+                                <img src="img/song/别怕变老.webp" class="song-img">
+                            </div>
+                            <div class="song-name-div">
+                                <a  class="song-name">别怕变老</a>
+                            </div>
+                            <div class="song-author-div">
+                                <a  class="song-author">艾热AIR/王以太</a>
+                            </div>
+                            <div class="song-time-div">
+                                <a class="song-time">04:18</a>
+                            </div>
+                        </li>
+                        <li class="song" title="haha">
+                            <div class="ranking">
+                                2
+                            </div>
+                            <div class="song-img-div">
+                                <img src="img/song/别怕变老.webp" class="song-img">
+                            </div>
+                            <div class="song-name-div">
+                                <a  class="song-name">别怕变老</a>
+                            </div>
+                            <div class="song-author-div">
+                                <a  class="song-author">艾热AIR/王以太</a>
+                            </div>
+                            <div class="song-time-div">
+                                <a class="song-time">04:18</a>
+                            </div>
+                        </li>
+                        <li class="song" title="haha">
+                            <div class="ranking">
+                                3
+                            </div>
+                            <div class="song-img-div">
+                                <img src="img/song/别怕变老.webp" class="song-img">
+                            </div>
+                            <div class="song-name-div">
+                                <a  class="song-name">别怕变老</a>
+                            </div>
+                            <div class="song-author-div">
+                                <a  class="song-author">艾热AIR/王以太</a>
+                            </div>
+                            <div class="song-time-div">
+                                <a class="song-time">04:18</a>
+                            </div>
+                        </li>
+                        <li class="song" title="haha">
+                            <div class="ranking">
+                                4
+                            </div>
+                            <div class="song-img-div">
+                                <img src="img/song/别怕变老.webp" class="song-img">
+                            </div>
+                            <div class="song-name-div">
+                                <a  class="song-name">别怕变老</a>
+                            </div>
+                            <div class="song-author-div">
+                                <a  class="song-author">艾热AIR/王以太</a>
+                            </div>
+                            <div class="song-time-div">
+                                <a class="song-time">04:18</a>
+                            </div>
+                        </li>
+                        <li class="song" title="haha">
+                            <div class="ranking">
+                                5
+                            </div>
+                            <div class="song-img-div">
+                                <img src="img/song/别怕变老.webp" class="song-img">
+                            </div>
+                            <div class="song-name-div">
+                                <a  class="song-name">别怕变老</a>
+                            </div>
+                            <div class="song-author-div">
+                                <a  class="song-author">艾热AIR/王以太</a>
+                            </div>
+                            <div class="song-time-div">
+                                <a class="song-time">04:18</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="change-my-msg">
+            <div id="change-div">
+                <div id="change-msg">
+                    <p1>个人设置</p1>
+                    <span>昵称</span>
+                    <input type="text" id="change-name">
+                    <span>介绍</span>
+                    <textarea id="signature"></textarea>
+                    <button id="no-button">取消</button>
+                </div>
+                <div id="change-img-div">
+                    <img src="img/avatar/avatar1.jpg" id="change-img">
+                    <button id="ok-button">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <!--右击的歌单列表-->
+        <div id="playlist-list">
+            <span id="MyLike" class="playlist-Options">我喜欢</span>
+            <div id="My-playlist">
+
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+        <script src="js/Ranking.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

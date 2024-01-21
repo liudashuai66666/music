@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/Singer.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nuv1">
+                        <li><a href="#" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="MySong.html">我的音乐</a></li>
+                        <li><a href="community.html">社区</a></li>
+                        <li><a href="#">音乐人</a></li>
+                        <li><a href="#" id="manage-div">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+            </div>
+        </header>
+        <div id="g_nav2">
+            <div class="choices">
+                <ul class="nav">
+                    <li><a href="Hall.html">推荐</a></li>
+                    <li><a href="Ranking.html">排行榜</a></li>
+                    <li><a href="Playlist.html">歌单</a></li>
+                    <li><a href="#">主播电台</a></li>
+                    <li><a href="#" id="singer-nav">歌手</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main-body">
+                <div class="body-content">
+                    <div class="tab">
+                        <span>热门歌手</span>
+                    </div>
+                    <ul class="recommend-list" id="recommend-list">
+                        <li class="recommend-list-li">
+                            <div class="recommend-cnt">
+                                <img src="img/playlist/song9.jpg">
+                                <a href="#" title="假如能回到过去，你想做什么"
+                                   class="img-msk">假如能回到过去，你想做什么</a>
+                            </div>
+                            <p class="dec">
+                                <a title="假如能回到过去，你想做什么" class="dec-msk"
+                                   href="#">假如能回到过去，你想做什么</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="pages-div">
+                    <span id="home-button">首页</span>
+                    <span id="back-button">上一页</span>
+                    <span id="next-button">下一页</span>
+                    <span id="end-button">尾页</span>
+                    <span id="pages-span">当前 1/4 页</span>
+                    <span id="cnt-span">一共 20 条数据</span>
+                    <span>跳转到</span>
+                    <input type="text" id="pages-input">
+                    <span>页</span>
+                    <button id="go-button">跳转</button>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+        <script src="js/Singer.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

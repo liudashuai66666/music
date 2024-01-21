@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑椒音乐</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet">
+        <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" rel="stylesheet">
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+
+        <!--弹窗-->
+
+        <link rel="stylesheet" href="css/Manage.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="img/logo.png" id="logoImg">
+                <h2 id="logo">
+                    <a href="#">黑椒音乐</a>
+                </h2>
+                <nav>
+                    <ul class="nav1" id="nav1">
+                        <li><a href="Hall.html" class="nac-choose" id="found-song-nav">发现音乐</a></li>
+                        <li><a href="MySong.html" class="nac-choose" id="MySong-nav">我的音乐</a></li>
+                        <li><a href="community.html" class="nac-choose">社区</a></li>
+                        <li><a href="#" class="nac-choose">音乐人</a></li>
+                        <li><a class="nac-choose" id="manage-div">管理</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-magnifying-glass"></i>
+                    <input type="text" id="SearchInput" placeholder="音乐/歌手"><br>
+                </span><br>
+                <span>
+                    <img src="img/flag.png" class="my-avatar" id="my-avatar">
+                </span>
+                <div id="my-msg-control">
+                    <ul id="msg-control-ul">
+                        <li class="msg-control-li" id="change-msg-button">修改资料</li>
+                        <li class="msg-control-li" id="Back-off-login">退出登录</li>
+                    </ul>
+                </div>
+            </div>
+        </header><!--导航栏-->
+
+        <div class="manage-body">
+
+            <div class="manage-choose-list">
+                <div class="manage-choose" id="manage-song">歌曲</div>
+                <div class="manage-choose" id="manage-singer">音乐人</div>
+                <div class="manage-choose" id="manage-user">用户</div>
+            </div>
+
+
+            <div id="manage-song-list">
+                <div class="song-title-div">
+                    <span class="song-name-div">歌曲</span>
+                    <span class="song-author-div">作者</span>
+                    <span class="song-createTime-div">申请时间</span>
+                </div>
+                <div id="song-list">
+                    <div class="song-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">打回</span>
+                        <span class="okButton">通过</span>
+                    </div>
+                    <div class="song-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">打回</span>
+                        <span class="okButton">通过</span>
+                    </div>
+                    <div class="song-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">打回</span>
+                        <span class="okButton">通过</span>
+                    </div>
+                    <div class="song-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">打回</span>
+                        <span class="okButton">通过</span>
+                    </div>
+                    <div class="song-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">打回</span>
+                        <span class="okButton">通过</span>
+                    </div>
+                    <div class="song-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">打回</span>
+                        <span class="okButton">通过</span>
+                    </div>
+                </div>
+                <div id="pages-div">
+                    <span id="home-button">首页</span>
+                    <span id="back-button">上一页</span>
+                    <span id="next-button">下一页</span>
+                    <span id="end-button">尾页</span>
+                    <span id="pages-span">当前 1/4 页</span>
+                    <span id="cnt-span">一共 20 条数据</span>
+                    <span>跳转到</span>
+                    <input type="text" id="pages-input">
+                    <span>页</span>
+                    <button id="go-button">跳转</button>
+                </div>
+            </div>
+
+
+            <div id="manage-singer-list">
+                <div class="song-title-div">
+                    <span class="song-name-div">姓名</span>
+                    <span class="song-author-div">个性签名</span>
+                    <span class="singer-createTime-div">申请时间</span>
+                </div>
+                <div id="singer-list">
+                    <div class="singer-list-li">
+                        <div class="singer-user">
+                            <img src="img/song/一路之下.webp" class="user-img">
+                            <span class="user-name">hahahaha</span>
+                            <span class="user-author">刘洋1</span>
+                            <span class="user-createTime">2023-07-28 12:00:30</span>
+                            <span class="noButton">打回</span>
+                            <span class="okButton">通过</span>
+                        </div>
+                        <div class="singer-song">
+                            <img src="img/song/一路之下.webp" class="singer-song-img">
+                            <span class="singer-song-name">hahahaha</span>
+                        </div>
+                        <span class="unfold">展开</span>
+                    </div>
+                    <div class="singer-list-li">
+                        <div class="singer-user">
+                            <img src="img/song/一路之下.webp" class="user-img">
+                            <span class="user-name">hahahaha</span>
+                            <span class="user-author">刘洋1</span>
+                            <span class="user-createTime">2023-07-28 12:00:30</span>
+                            <span class="noButton">打回</span>
+                            <span class="okButton">通过</span>
+                        </div>
+                        <div class="singer-song">
+                            <img src="img/song/一路之下.webp" class="singer-song-img">
+                            <span class="singer-song-name">hahahaha</span>
+                        </div>
+                        <span class="unfold">展开</span>
+                    </div>
+                    <div class="singer-list-li">
+                        <div class="singer-user">
+                            <img src="img/song/一路之下.webp" class="user-img">
+                            <span class="user-name">hahahaha</span>
+                            <span class="user-author">刘洋1</span>
+                            <span class="user-createTime">2023-07-28 12:00:30</span>
+                            <span class="noButton">打回</span>
+                            <span class="okButton">通过</span>
+                        </div>
+                        <div class="singer-song">
+                            <img src="img/song/一路之下.webp" class="singer-song-img">
+                            <span class="singer-song-name">hahahaha</span>
+                        </div>
+                        <span class="unfold">展开</span>
+                    </div>
+                    <div class="singer-list-li">
+                        <div class="singer-user">
+                            <img src="img/song/一路之下.webp" class="user-img">
+                            <span class="user-name">hahahaha</span>
+                            <span class="user-author">刘洋1</span>
+                            <span class="user-createTime">2023-07-28 12:00:30</span>
+                            <span class="noButton">打回</span>
+                            <span class="okButton">通过</span>
+                        </div>
+                        <div class="singer-song">
+                            <img src="img/song/一路之下.webp" class="singer-song-img">
+                            <span class="singer-song-name">hahahaha</span>
+                        </div>
+                        <span class="unfold">展开</span>
+                    </div>
+                    <div class="singer-list-li">
+                        <div class="singer-user">
+                            <img src="img/song/一路之下.webp" class="user-img">
+                            <span class="user-name">hahahaha</span>
+                            <span class="user-author">刘洋1</span>
+                            <span class="user-createTime">2023-07-28 12:00:30</span>
+                            <span class="noButton">打回</span>
+                            <span class="okButton">通过</span>
+                        </div>
+                        <div class="singer-song">
+                            <img src="img/song/一路之下.webp" class="singer-song-img">
+                            <span class="singer-song-name">hahahaha</span>
+                        </div>
+                        <span class="unfold">展开</span>
+                    </div>
+                </div>
+                <div id="singer-pages-div">
+                    <span id="singer-home-button">首页</span>
+                    <span id="singer-back-button">上一页</span>
+                    <span id="singer-next-button">下一页</span>
+                    <span id="singer-end-button">尾页</span>
+                    <span id="singer-pages-span">当前 1/4 页</span>
+                    <span id="singer-cnt-span">一共 20 条数据</span>
+                    <span>跳转到</span>
+                    <input type="text" id="singer-pages-input">
+                    <span>页</span>
+                    <button id="singer-go-button">跳转</button>
+                </div>
+            </div>
+
+            <div id="manage-user-list">
+                <div class="song-title-div">
+                    <span class="song-name-div">昵称</span>
+                    <span class="song-author-div">简介</span>
+                    <span class="song-createTime-div">身份</span>
+                </div>
+                <div id="user-list">
+                    <div class="user-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">冻结</span>
+                    </div>
+                    <div class="user-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">冻结</span>
+                    </div>
+                    <div class="user-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">冻结</span>
+                    </div>
+                    <div class="user-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">冻结</span>
+                    </div>
+                    <div class="user-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">冻结</span>
+                    </div>
+                    <div class="user-list-li">
+                        <img src="img/song/一路之下.webp" class="song-img">
+                        <span class="song-name">hahahaha</span>
+                        <span class="song-author">刘洋1</span>
+                        <span class="song-createTime">2023-07-28 12:00:30</span>
+                        <span class="noButton">冻结</span>
+                    </div>
+                </div>
+                <div id="user-pages-div">
+                    <span id="user-home-button">首页</span>
+                    <span id="user-back-button">上一页</span>
+                    <span id="user-next-button">下一页</span>
+                    <span id="user-end-button">尾页</span>
+                    <span id="user-pages-span">当前 1/4 页</span>
+                    <span id="user-cnt-span">一共 20 条数据</span>
+                    <span>跳转到</span>
+                    <input type="text" id="user-pages-input">
+                    <span>页</span>
+                    <button id="user-go-button">跳转</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="change-my-msg">
+            <div id="change-div">
+                <div id="change-msg">
+                    <p1>个人设置</p1>
+                    <span>昵称</span>
+                    <input type="text" id="change-name">
+                    <span>介绍</span>
+                    <textarea id="signature"></textarea>
+                    <button id="no-button">取消</button>
+                </div>
+                <div id="change-img-div">
+                    <img src="img/avatar/avatar1.jpg" id="change-img">
+                    <button id="ok-button">保存</button>
+                </div>
+            </div>
+        </div><!--修改个人资料-->
+        <footer>
+            <p>&copy; 2023 黑椒音乐. All rights reserved.</p>
+        </footer>
+        <script src="js/Manage.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/Interceptor.js"></script>
+    </body>
+</html>

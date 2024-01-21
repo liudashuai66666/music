@@ -12,6 +12,7 @@ function interceptRequest(req){
 }
 
 
+
 /**
  * 拦截响应
  */
@@ -29,7 +30,7 @@ function interceptResponse (resp){
         resend(resp);
     }else if(resp.status==203){
         /*重新登录*/
-        location.href="login.html"
+        location.href="Login.html"
     }else{
         return resp;
     }
@@ -65,7 +66,9 @@ function refreshToken(){
  */
 function saveToken(resp){
     var token=resp.headers.token;
+    var long_token=resp.headers.long_token;
     console.log("短token："+token);
     // 将JWT保存在localStorage中
     localStorage.setItem('token',token);
+    localStorage.setItem('token',long_token);
 }

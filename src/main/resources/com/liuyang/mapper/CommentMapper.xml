@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuyang.mapper.CommentMapper">
+    <insert id="addComments_one">
+        INSERT INTO song_comments
+        (mailbox,song_id,receiver_id,ancestor_id,time,content,cnt)
+        VALUES
+        (#{mailbox}, #{song_id}, #{receiver_id}, #{ancestor_id}, #{time}, #{content}, #{cnt});
+    </insert>
+
+    <select id="selectComment_one" resultType="com.liuyang.pojo.Comment">
+        select * from song_comments where song_id = #{song_id} and receiver_id = 0;
+    </select>
+    <select id="selectComment_two" resultType="com.liuyang.pojo.Comment">
+        select * from song_comments where ancestor_id = #{ancestor_id};
+    </select>
+    <select id="getLastInsertId" resultType="java.lang.Integer">
+        SELECT id FROM song_comments ORDER BY id DESC LIMIT 1;
+    </select>
+</mapper>

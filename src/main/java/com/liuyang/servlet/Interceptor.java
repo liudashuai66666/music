@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-@WebFilter("/Ly/*") //
+@WebFilter(urlPatterns = {"/song/*","/playlist/*","/user/changeImg","/user/changeMsg"})
 public class Interceptor implements Filter {
 
     @Override
@@ -33,7 +33,6 @@ public class Interceptor implements Filter {
             book="long_token";
         }
         System.out.println(token);
-        System.out.println("token类型：" + book);
         int flag = JWTUtils.pd(token, book);
         if (flag == 0) {
             // 如果order值为0，表示验证通过，但是要刷新token
@@ -43,8 +42,12 @@ public class Interceptor implements Filter {
             //解析长令牌,用长令牌中的数据来刷新短令牌
             Map<String, Object> map = JWTUtils.checkToken(token);
             Object data = map.get("data");
-            String short_token = JWTUtils.createToken(data);
-            resp.setHeader("token",short_token);
+            String shortToken = JWTUtils.createToken(data);
+            String longToken = JWTUtils.createLongToken(data);
+            resp.setHeader("token",shortToken);
+            resp.setHeader("long_token",longToken);
+            System.out.println(shortToken);
+            System.out.println(longToken);
             filterChain.doFilter(req, resp);
         } else if (flag == 1) {
             // 如果order值为1，表示短token过期,长token未知；

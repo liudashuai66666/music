@@ -6,6 +6,8 @@ public class Playlist {
     private String img;
     private String author;
     private String time;
+    private String description;
+    private int cnt;
 
     public int getId() {
         return id;
@@ -47,6 +49,22 @@ public class Playlist {
         this.time = time;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getCnt() {
+        return cnt;
+    }
+
+    public void setCnt(int cnt) {
+        this.cnt = cnt;
+    }
+
     @Override
     public String toString() {
         return "Playlist{" +
@@ -55,6 +73,8 @@ public class Playlist {
                 ", img='" + img + '\'' +
                 ", author='" + author + '\'' +
                 ", time='" + time + '\'' +
+                ", description='" + description + '\'' +
+                ", cnt=" + cnt +
                 '}';
     }
 }

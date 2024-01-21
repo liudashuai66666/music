@@ -66,6 +66,9 @@ a{
     padding-right: 17px;
     color: #FFFFFF;
 }
+#MySong-nav{
+    background-color: rgb(0,0,0);
+}
 
 /* 主内容样式 */
 
@@ -120,7 +123,10 @@ footer {
 .header div{
     display: flex;
 }
-
+#manage-div:hover{
+    cursor: not-allowed;
+    background-color: rgb(51, 51, 51);
+}
 
 .nav {
     list-style-type: none;
@@ -259,7 +265,12 @@ ul{
 .concern-fans-a:hover .quantity{
     color: rgb(49, 194, 124);
 }
-
+#MyLike-nav{
+    color: rgb(49, 194, 124);
+}
+#song_number{
+    color: rgb(49, 194, 124);
+}
 .flag{
     font-size: 14px;
     display: block;
@@ -282,11 +293,12 @@ main-body
 }
 .choose1{
     height: 56px;
+    width: 1200px;
     position: absolute;
     top: -56px;
     left: 0;
     margin-bottom: 0;
-    width: 80%;
+    align-items: center;
     display: flex;
 }
 .choose2{
@@ -315,10 +327,65 @@ main-body
     padding: 0;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .choose1-class:hover{
     color: rgb(49, 194, 124);
+    cursor: pointer;
 }
+
+#concern-div{
+    color: #FFFFFF;
+    position: relative;
+    float: left;
+    height: 38px;
+    width: 120px;
+    font-size: 16px;
+    overflow: hidden;
+    margin-left: 690px;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-left: 1px solid rgb(211,211,211);  /* 设置按钮的左边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-bottom: 1px solid rgb(211,211,211);  /* 设置按钮的下边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-right: 1px solid rgb(211,211,211);  /* 设置按钮的右边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-top: 1px solid rgb(211,211,211);  /* 设置按钮的上边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+}
+#concern-button{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#singer-div{
+    color: #FFFFFF;
+    position: relative;
+    float: left;
+    height: 38px;
+    width: 120px;
+    font-size: 16px;
+    overflow: hidden;
+    margin-left: 690px;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-left: 1px solid rgb(211,211,211);  /* 设置按钮的左边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-bottom: 1px solid rgb(211,211,211);  /* 设置按钮的下边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-right: 1px solid rgb(211,211,211);  /* 设置按钮的右边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+    border-top: 1px solid rgb(211,211,211);  /* 设置按钮的上边边框样式为1像素的实线，颜色为rgb(211,211,211) */
+}
+#singer-button{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .choose2-class:hover{
     color: rgb(49, 194, 124);
 }
@@ -348,10 +415,19 @@ main-body
     border-top: 1px solid rgb(211,211,211);  /* 设置按钮的上边边框样式为1像素的实线，颜色为rgb(211,211,211) */
     color: #333333;
 }
+.button:hover{
+    cursor: pointer; /* 更改鼠标形状为指针形状 */
+    background-color: rgb(237, 237, 237);
+}
 .play-song{
-    background-color: rgb(44, 175, 111);
+    background-color: rgb(49, 194, 124);
     color: #FFFFFF;
 }
+.play-song:hover{
+    background-color: rgb(44, 175, 111);
+    cursor: pointer; /* 更改鼠标形状为指针形状 */
+}
+
 .song-ing-div{
     height: 50px;
     width: 50px;
@@ -368,7 +444,7 @@ main-body
     display: flex;
     height: 50px;
     padding-left: 50px;
-    padding-right: 0px;
+    padding-right: 0;
     margin: 0;
     list-style-type: none;
     line-height: 50px;
@@ -378,6 +454,12 @@ main-body
     margin: 0;
     padding-left: 0;
     padding-bottom: 120px;
+}
+#mySong-list{
+    display: none;
+}
+#MySong{
+    display: none;
 }
 .song-name-div{
     display: flex;
@@ -439,29 +521,530 @@ main-body
 }
 
 
+/*
+--------------------------------------------------------------------
+我创建的歌单
+*/
+
+.recommend-list{
+    display: flex;
+    margin-bottom: 50px;
+    padding-left: 0;
+    margin-left: -28px;
+}
+/*我的收藏歌单*/
+#recommend-list-collection{
+    display: none;
+    width: 1200px;
+    flex-wrap: wrap;/*自动换行*/
+    padding-left: 0;
+    margin: 50px auto 50px;
+}
+#content{
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.recommend-list-li{
+    display: block;
+    height: 210px;
+    width: 210px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.recommend-cnt {
+    position: relative;
+    display: inline-block;
+}
+
+.img-msk {
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 215px;
+    height: 215px;
+    display: block;
+    color: rgb(0,0,0);
+    z-index: 1; /* 提高层级，确保 .msk 覆盖图片 */
+}
+.recommend-cnt:hover img{
+    transform: scale(1.1);
+}
+.recommend-cnt img {
+    z-index: 0; /* 使图片位于 .msk 下方 */
+    width: 215px;
+}
+
+.msk:hover {
+    opacity: 0.8; /* 添加悬停效果 */
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.dec{
+    margin: 8px 0 3px;
+    font-size: 14px;
+}
+
+.dec-msk{
+    width: 215px;
+    font-size: 19px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+    padding-left: 0;
+    text-indent: 0;
+    padding-right: 0;
+}
+.dec-msk:hover{
+    text-decoration: underline;
+}
+
+
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+创建歌单
+*/
+#create-playlist-div {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 745.6px;
+    width: 1518.4px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); /* 背景虚化效果 */
+    background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，可根据需要调整透明度 */
+}
+#create-playlist{
+    width: 500px;
+    height: 470px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#title{
+    width: 500px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+}
+#create-playlist-name{
+    width: 500px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#create-playlist-name input{
+    padding-left: 10px;
+    width: 250px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    /* 溢出内容隐藏 */
+}
+#buttons{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#buttons button{
+    width: 100px;
+    height: 30px;
+    margin: 0 30px;
+}
+#create-playlist-img{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#playlist-img{
+    width: 150px;
+    height: 150px;
+}
+
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
 
 
 
+/*
+上传歌曲
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
+#create-song-div {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 745.6px;
+    width: 1518.4px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); /* 背景虚化效果 */
+    background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，可根据需要调整透明度 */
+}
+#create-song{
+    width: 500px;
+    height: 470px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#title-song{
+    width: 500px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+}
+#create-song-name{
+    width: 500px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#song-name{
+    padding-left: 10px;
+    width: 250px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    /* 溢出内容隐藏 */
+}
+#buttons-song{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#buttons-song button{
+    width: 100px;
+    height: 30px;
+    margin: 0 30px;
+}
+#create-song-img{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#song-img{
+    width: 150px;
+    height: 150px;
+}
+.song-button button{
+    height: 29px;
+    width: 50px;
+}
+#song-mp3{
+    padding-left: 10px;
+    width: 198px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    pointer-events: none;
+    /* 溢出内容隐藏 */
+}
+#song-lyrics{
+    padding-left: 10px;
+    width: 198px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    pointer-events: none;
+    /* 溢出内容隐藏 */
+}
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
+
+/*
+成为歌手
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
+#become-singer-div {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 745.6px;
+    width: 1518.4px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); /* 背景虚化效果 */
+    background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，可根据需要调整透明度 */
+}
+#become-singer-song{
+    width: 500px;
+    height: 470px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#title-singer-song{
+    width: 500px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+}
+#become-singer-song-name{
+    width: 500px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#singer-song-name{
+    padding-left: 10px;
+    width: 250px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    /* 溢出内容隐藏 */
+}
+#buttons-singer{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#buttons-singer button{
+    width: 100px;
+    height: 30px;
+    margin: 0 30px;
+}
+#become-singer-song-img{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#singer-song-img{
+    width: 150px;
+    height: 150px;
+}
+.song-button button{
+    height: 29px;
+    width: 50px;
+}
+#singer-song-mp3{
+    padding-left: 10px;
+    width: 198px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    pointer-events: none;
+    /* 溢出内容隐藏 */
+}
+#singer-song-lyrics{
+    padding-left: 10px;
+    width: 198px;
+    height: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+    pointer-events: none;
+    /* 溢出内容隐藏 */
+}
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
+
+
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+右击选项框
+*/
+.context-menu {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    width: 100px;
+}
+
+.menu-option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.menu-option:hover{
+    background-color: rgb(230,230,230);
+}
+
+
+/*
+-------------------------------------
+*/
+/*concern-main内容*/
+#concern-main{
+    display: none;
+    width: 1200px;
+    margin: 0 auto;
+}
+.concern-list{
+    display: flex;
+    flex-wrap: wrap;/*自动换行*/
+    padding-left: 0;
+    margin: 0;
+}
+
+.concern-list-li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 204px;
+    width: 220px;
+    padding: 20px 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(253, 253, 253);
+}
+
+.concern-cnt {
+    position: relative;
+    display: inline-block;
+}
+
+.concern-cnt:hover img{
+    transform: scale(1.1);
+}
+
+
+.concern-cnt img {
+    z-index: 0; /* 使图片位于 .msk 下方 */
+    width: 140px;
+    border-radius: 70px;
+}
+
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.dec{
+
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.concern-user-name{
+    color: rgb(0,0,0);
+    padding: 0;
+    font-size: 18px;
+}
+.concern-user-name:hover{
+    text-decoration: underline;
+}
+/*
+--------------------------------------------
+*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+歌单列表
+*/
+#playlist-list {
+    position: fixed;
+    z-index: 999;
+    margin-left: 150px; /* 与 #add-style-song 的宽度相同或调整为合适的值 */
+    width: 80px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 1px solid rgb(211,211,211); /* 左边界线样式 */
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+    border-right: 1px solid rgb(211,211,211); /* 右边界线样式 */
+    border-top: 1px solid rgb(211,211,211); /* 右边界线样式 */
+    border-radius: 5px;
+    background-color: white;
+}
+.playlist-Options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+}
+.playlist-Options:hover{
+    background-color: rgb(225,225,225);
+    cursor: pointer;
+}
+#My-playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden; /* 隐藏溢出部分 */
+    text-overflow: ellipsis; /* 使用省略号表示被隐藏的部分 */
+}
+footer {
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    color: #fff;                    /* 设置文字颜色为白色 */
+    padding: 10px;                  /* 上下左右各10像素的内边距 */
+    text-align: center;             /* 文字居中对齐 */
+}
 
 
 

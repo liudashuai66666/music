@@ -1,0 +1,598 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;  /* 设置字体为Arial或sans-serif字体族 */
+    margin: 0;                      /* 清除外边距 */
+    padding: 0;                     /* 清除内边距 */
+    background-color: rgb(245,245,245);
+}
+
+/* 头部样式 */
+.header {
+    display: flex;                  /* 使用弹性布局 */
+    align-items: center;            /* 垂直居中对齐 */
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    color: #fff;                    /* 设置文字颜色为白色 */
+    /*padding: 10px;*/                  /* 上下左右各10像素的内边距 */
+    justify-content: center;        /* 元素居中对齐 */
+}
+
+.header h2 {
+    padding-right: 5px;             /* 右侧添加5像素的内边距 */
+    margin-top: 10px;
+    margin-bottom: -3px;
+}
+
+#logo a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* 导航样式 */
+.nav1 {
+    display: flex;                  /* 使用弹性布局 */
+    list-style-type: none;          /* 清除列表样式 */
+    padding: 0;                     /* 清除内边距 */
+    margin: 0;                      /* 清除外边距 */
+}
+
+.nav1 li {
+    margin-top: 15px;
+    margin-bottom: 24.2px;
+    justify-content: center;
+}
+
+.nav1 li:last-child {
+    margin-right: 0;                /* 最后一个菜单项去除右侧外边距 */
+}
+
+.nav1 a{
+    padding-top: 16px;
+    padding-bottom: 23px;
+}
+
+.nav1 a:hover{
+    /* 鼠标悬停时添加阴影效果 */
+    background-color: rgb(0,0,0);
+    color: white;
+    text-decoration: none;          /* 去除链接下划线 */
+}
+
+a{
+    color: #fff;                    /* 设置链接文本颜色为白色 */
+    text-decoration: none;          /* 去除链接下划线 */
+    /*float: left;*/                  /* 左浮动 */
+    padding-right: 17px;            /* 右侧填充20像素 */
+    padding-left: 17px;
+    text-indent: -9999px;           /* 文本缩进隐藏 */
+}
+#manage-song-list a:hover{
+    color: #333333;
+    text-decoration: none;          /* 去除链接下划线 */
+}
+i{
+    width: 20px;
+}
+
+#manage-div:hover{
+    cursor: not-allowed;
+    background-color: rgb(51, 51, 51);
+}
+.my-avatar{
+    position: relative;
+}
+
+/*当头像获得焦点要出现的选择*/
+#my-msg-control{
+    padding-top: 10px;
+    display: none;
+    position: absolute;
+    top: 34px;
+    right: 303px;
+    z-index: 999;
+}
+#msg-control-ul{
+    border-radius: 10px;
+    background-color: rgb(43, 43, 43);
+    display: flex;                  /* 使用弹性布局 */
+    list-style-type: none;          /* 清除列表样式 */
+    flex-direction: column;         /*竖着排列*/
+    padding: 0;
+    margin: 0;
+}
+.msg-control-li{
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer; /* 鼠标悬停时显示指针样式 */
+}
+.msg-control-li:hover{
+    background-color: rgb(53, 53, 53);
+}
+
+
+
+/* 主内容样式 */
+
+
+#SearchInput{
+    background-color: rgba(225,225,225,1);
+    /*透明度*/
+    border-radius: 15px;
+    /*圆角边框*/
+    width: 200px;
+    height: 30px;
+    /* 输入框和按钮的宽高 */
+    border: none;
+    /* 去除边框 */
+    outline: none;
+    /* 去除选中时的边框样式 */
+    padding-left: 30px;
+    /* 左内边距 */
+    box-sizing: border-box;
+    /* 盒模型为border-box */
+    font-size: 15px;
+    /* 字体大小 */
+    color: #333333;
+    /* 文字颜色为#333333（深灰色） */
+    margin-bottom: 0;
+    /* 底部外边距 */
+    margin-right: 15px;
+    margin-top: 13px;
+}
+
+.header img{
+    width: 30px;
+    height: 30px;
+    margin-top: 13px;
+    border-radius: 15px;
+}
+
+#logoImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 0;
+    margin-top: 9px;
+}
+
+.header div{
+    display: flex;
+}
+
+/*左边选项栏的样式*/
+.manage-body{
+    display: flex;
+    margin: 0 auto;
+}
+.manage-choose-list{
+    height: 613px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(225,225,225);
+}
+.manage-choose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    font-size: 22px;
+}
+.manage-choose:hover{
+    cursor: pointer;
+    background-color: rgb(205,205,205);
+}
+/**********************/
+
+
+/*歌曲列表*/
+.song-title-div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+}
+.song-name-div{
+    margin-left: 105px;
+}
+.song-author-div{
+    margin-left: 360px;
+}
+.singer-createTime-div{
+    margin-left: 324px;
+}
+#manage-song-list{
+    /*width: 1368px;*/
+    width: 100%;
+    max-height: 613px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+#song-list{
+    display: flex;
+    flex-direction: column;
+}
+.song-list-li{
+    display: flex;
+    height: 80px;
+    /*width: 1368px;*/
+    width: 100%;
+    align-items: center;
+    color: #333333;
+    text-indent: 0;
+    padding: 0;
+}
+.user-list-li{
+    display: flex;
+    height: 80px;
+    /*width: 1368px;*/
+    width: 100%;
+    align-items: center;
+    color: #333333;
+    text-indent: 0;
+    padding: 0;
+}
+.user-list-li:hover{
+    background-color: #cccccc;
+}
+.song-list-li:hover{
+    background-color: #cccccc;
+}
+.song-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 0 15px 0 30px;
+}
+.song-name{
+    font-size: 20px;
+    width: 396px;
+}
+.song-author{
+    font-size: 20px;
+    width: 396px;
+}
+.song-createTime{
+    font-size: 20px;
+    width: 280px;
+}
+.okButton, .noButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.okButton {
+    background-color: #4caf50;
+    margin-left: 5px;
+}
+
+.noButton {
+    background-color: #f44336;
+}
+
+#pages-div{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+    border-top: 1px solid rgb(211,211,211); /* 上边界线样式 */
+}
+#pages-div span{
+    cursor: pointer;
+}
+#pages-input{
+    width: 50px;
+}
+#home-button{
+    padding: 0 10px;
+}
+#back-button{
+    padding: 0 10px;
+}
+#next-button{
+    padding: 0 10px;
+}
+#end-button{
+    padding: 0 10px;
+}
+#pages-span{
+    padding: 0 10px;
+}
+#cnt-span{
+    padding: 0 20px 0 10px;
+}
+#manage-song{
+    background-color: rgb(205,205,205);
+}
+/**************/
+
+
+/*
+歌手申请
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
+.song-title-div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+}
+.song-name-div{
+    margin-left: 105px;
+}
+.song-author-div{
+    margin-left: 360px;
+}
+.song-createTime-div{
+    margin-left: 360px;
+}
+
+#manage-user-list{
+    /*width: 1368px;*/
+    width: 100%;
+    max-height: 613px;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+}
+
+#manage-singer-list{
+    /*width: 1368px;*/
+    width: 100%;
+    max-height: 613px;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+}
+#singer-list{
+    display: flex;
+    flex-direction: column;
+
+}
+.singer-user{
+    display: flex;
+    height: 80px;
+    /*width: 1368px;*/
+    width: 100%;
+    align-items: center;
+    color: #333333;
+    text-indent: 0;
+    padding: 0;
+}
+.unfold{
+    padding-left: 30px;
+    width: 100%;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+}
+.singer-song{
+    display: none;
+    height: 40px;
+    /*width: 1368px;*/
+    width: 100%;
+    align-items: center;
+    color: #333333;
+    text-indent: 0;
+    padding: 0;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+}
+.singer-list-li{
+    display: flex;
+    flex-direction: column;
+}
+.user-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 0 15px 0 30px;
+}
+.user-name{
+    font-size: 20px;
+    width: 396px;
+}
+.user-author{
+    font-size: 20px;
+    width: 396px;
+}
+.user-createTime{
+    font-size: 20px;
+    width: 280px;
+}
+.singer-song-img{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+.singer-song-name{
+    color: rgb(153, 153, 153);
+}
+.okButton, .noButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.okButton {
+    background-color: #4caf50;
+    margin-left: 5px;
+}
+
+.noButton {
+    background-color: #f44336;
+}
+/*分页*/
+#singer-pages-div{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+    border-top: 1px solid rgb(211,211,211); /* 上边界线样式 */
+}
+#singer-pages-div span{
+    cursor: pointer;
+}
+#singer-pages-input{
+    width: 50px;
+}
+#singer-home-button{
+    padding: 0 10px;
+}
+#singer-back-button{
+    padding: 0 10px;
+}
+#singer-next-button{
+    padding: 0 10px;
+}
+#singer-end-button{
+    padding: 0 10px;
+}
+#singer-pages-span{
+    padding: 0 10px;
+}
+#singer-cnt-span{
+    padding: 0 20px 0 10px;
+}
+#singer-manage-song{
+    background-color: rgb(205,205,205);
+}
+/*
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+*/
+
+/*修改个人资料*/
+#change-my-msg {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 745.6px;
+    width: 1518.4px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); /* 背景虚化效果 */
+    background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，可根据需要调整透明度 */
+}
+#change-div{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center; /* 水平居中对齐内容 */
+    background-color: white;
+    border-radius: 10px;
+}
+#change-msg{
+    display: flex;
+    flex-direction: column;
+}
+#change-msg p1{
+    font-size: 25px;
+
+}
+#change-img-div{
+    display: flex;
+    flex-direction: column;
+}
+#change-img{
+    padding-top: 53.6px;
+    padding-left:20px;
+    width: 150px;
+    height: 150px;
+}
+
+#change-name{
+    border-radius: 2px;
+    /* 圆角边框 */
+    overflow: hidden;
+    /* 溢出内容隐藏 */
+    min-width: 80px;
+    height: 25px;
+}
+#signature{
+    resize: none; /* 禁止调整大小 */
+    height: 96px;
+    width: 164px;
+}
+#change-div button{
+    margin: 20px;
+    width: 60px;
+}
+/*********/
+
+
+#user-pages-div{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(211,211,211); /* 下边界线样式 */
+    border-top: 1px solid rgb(211,211,211); /* 上边界线样式 */
+}
+#user-pages-div span{
+    cursor: pointer;
+}
+#user-pages-input{
+    width: 50px;
+}
+#user-home-button{
+    padding: 0 10px;
+}
+#user-back-button{
+    padding: 0 10px;
+}
+#user-next-button{
+    padding: 0 10px;
+}
+#user-end-button{
+    padding: 0 10px;
+}
+#user-pages-span{
+    padding: 0 10px;
+}
+#user-cnt-span{
+    padding: 0 20px 0 10px;
+}
+#user-manage-song{
+    background-color: rgb(205,205,205);
+}
+
+
+/*
+----------------
+*/
+footer {
+    background-color: #333;         /* 设置背景颜色为#333（深灰色） */
+    color: #fff;                    /* 设置文字颜色为白色 */
+    padding: 10px;                  /* 上下左右各10像素的内边距 */
+    text-align: center;             /* 文字居中对齐 */
+}

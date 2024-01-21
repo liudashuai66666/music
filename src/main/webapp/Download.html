@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>歌曲下载</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--axios-->
+
+    <script src="js/Interceptor.js"></script>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      p {
+        font-size: 18px;
+        margin-top: 20px;
+        color: #555;
+      }
+
+      .link {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        background-color: #f36;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .link:hover {
+        background-color: #d5302a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>歌曲下载</h1>
+      <p>歌曲名称: <span id="songName"></span></p>
+      <a id="imageLink" class="link" href="#" download>下载图片</a>
+      <a id="mp3Link" class="link" href="#" download>下载MP3文件</a>
+      <a id="lyricsLink" class="link" href="#" download>下载歌词文件</a>
+    </div>
+    <script src="js/Download.js"></script>
+
+  </body>
+</html>

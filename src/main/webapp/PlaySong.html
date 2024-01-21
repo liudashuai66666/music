@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>音乐播放</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!--axios-->
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/ca18b065e2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!--图标库-->
+    </head>
+    <body>
+        <div id="main">
+            <div id="play-content">
+                <div id="song-audio">
+                    <div id="song-img-div">
+                        <img src="img/song/一路之下.webp" id="song-img">
+                    </div>
+                    <div id="song-name-div">
+                        <span id="song-name">一路之下</span>
+                    </div>
+                    <div id="song-author-div">
+                        <span id="song-author">张杰</span>
+                        <span id="download">下载</span>
+                    </div>
+                    <div class="list-body-progress"><!--进度条-->
+                        <span class="used-time1" id="used-time">00:00</span>
+                        <div class="progress">
+                            <input class="range" id="range" type="range" min="0" max="226" step="0.01" autocapitalize="off">
+                        </div>
+                        <span class="used-time2" id="remaining-time">00:00</span>
+                    </div>
+                    <div class="list-body-content">
+                        <div class="body-content-button">
+                            <div class="content-button next-button" id="play-choose" title="顺序播放">
+                                <!--<i class="fa-solid fa-arrows-rotate"></i>--><!--单曲循环-->
+                                <!--<i class="fa-solid fa-shuffle"></i>--><!--随机播放-->
+                                <i class="fas fa-angle-double-right" id="play-manner"></i> <!-- 顺序播放 -->
+                            </div>
+                            <div class="content-button next-button" id="song-comments">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <div class="content-button back-button" id="back-button">
+                                <i class="fa fa-backward-step"></i>
+                            </div>
+                            <div class="content-button play-button" id="play-button">
+                                <i class="fa fa-play" id="i-play"></i>
+                            </div>
+                            <div class="content-button next-button" id="next-button">
+                                <i class="fa fa-forward-step"></i>
+                            </div>
+                            <div class="content-button next-button" id="song-lyrics">
+                                <i class="fa fa-music" id="i-lyrics"></i>
+                            </div>
+                            <div class="content-button next-button" id="song-volume">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                            <input class="range" id="volume" type="range" min="0" max="100" step="0.01" value="100" autocapitalize="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="song-list-div">
+                <div id="clean-div">
+                    <span id="clean-button">清空列表</span>
+                </div>
+                <ul id="song-list">
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="playlist">
+                        <div class="playlist-img-div">
+                            <img src="img/song/说散就散.webp" class="playlist-img">
+                        </div>
+                        <div class="playlist-song-msg">
+                            <div class="play-song-name">
+                                <span>说散就散</span>
+                            </div>
+                            <div class="playlist-song-author">
+                                <span>艾福杰尼 / 黄旭 / 田羽生</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="song-lyrics-div" >
+                <ul id="lyrics-list">
+                    <li class="song-lyrics-li" id="line-0" data-time="0">
+                        <span class="song-lyrics">作词 ： 梨冻紧/Wiz_H张子豪</span>
+                    </li>
+                    <li class="song-lyrics-li" id="line-1" data-time="1">
+                        <span class="song-lyrics">作曲 ： 梨冻紧/Wiz_H张子豪</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈哦哦姐姐</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈啊手动阀建安费</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈案件看来还是的风景拉萨</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈和卡拉还是绿卡就是的了</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈哦哦姐姐</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈啊手动阀建安费</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈案件看来还是的风景拉萨</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈和卡拉还是绿卡就是的了</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈哦哦姐姐</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈啊手动阀建安费</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈案件看来还是的风景拉萨</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈和卡拉还是绿卡就是的了</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈哦哦姐姐</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈啊手动阀建安费</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈案件看来还是的风景拉萨</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈和卡拉还是绿卡就是的了</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈哦哦姐姐</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈啊手动阀建安费</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈案件看来还是的风景拉萨</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈和卡拉还是绿卡就是的了</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈哦哦姐姐</span>
+                    </li>
+                    <li class="song-lyrics-li">
+                        <span class="song-lyrics">哈哈啊手动阀建安费</span>
+                    </li>
+                </ul>
+            </div>
+            <audio class="audio-element" id="audio-element" style="display: none"></audio>
+        </div>
+    </body>
+
+    <link rel="stylesheet" href="css/PlaySong.css">
+    <script src="js/Interceptor.js"></script>
+    <script src="js/PlaySong.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/code.jquery.com_jquery-3.7.0.js" type="text/javascript" charset="utf-8"></script>
+</html>

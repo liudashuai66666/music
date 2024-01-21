@@ -18,5 +18,6 @@
         <mapper resource="com/liuyang/mapper/UserMapper.xml"/>
         <mapper resource="com/liuyang/mapper/PlaylistMapper.xml"/>
         <mapper resource="com/liuyang/mapper/SongMapper.xml"/>
+        <mapper resource="com/liuyang/mapper/CommentMapper.xml"/>
     </mappers>
 </configuration>
